@@ -1,8 +1,8 @@
 // Content structure for the informational website
 export const contentStructure = {
   'resume-and-cover-letter': {
-    title: 'Resume & Cover Letter',
-    description: 'How to craft a top-tier resume and cover letter to stand out from the crowd.',
+    title: 'Stand Out: Resumes & Cover Letters',
+    description: 'Unlock the secrets to crafting resumes and cover letters that get noticed and land interviews.',
     icon: '📝',
     articles: [
       { id: 'resume-crash-course' },
@@ -13,8 +13,8 @@ export const contentStructure = {
     ]
   },
   'job-application-process': {
-    title: 'The Job Application Process',
-    description: 'Navigate the job application process with confidence.',
+    title: 'Master the Job Application Process',
+    description: 'Navigate every step from your first application to signing your dream offer, with confidence.',
     icon: '💻',
     articles: [
       { id: 'job-application-process' },
@@ -22,8 +22,8 @@ export const contentStructure = {
     ]
   },
   'interview-preparation': {
-    title: 'Interview Preparation',
-    description: 'Learn how to prepare thoroughly for your interviews to make a memorable impression.',
+    title: 'Interview Proficiency',
+    description: 'Learn insider tips and proven strategies to ace every interview.',
     icon: '🎙️',
     articles: [
       { id: 'online-assessments' },
@@ -32,8 +32,8 @@ export const contentStructure = {
     ]
   },
   'setting-up-for-success': {
-    title: 'Setting up for Success',
-    description: 'How to lay the groundwork to set yourself up for a successful career.',
+    title: 'Building a Strong Foundation',
+    description: 'Set yourself up for success with these top tips no one wants to tell you.',
     icon: '🚀',
     articles: [
       { id: 'general-advice' },
@@ -43,8 +43,8 @@ export const contentStructure = {
     ]
   },
   'university': {
-    title: 'University',
-    description: 'What you need to know about your time at university.',
+    title: 'University Life',
+    description: 'Everything you need to know academically, socially, and professionally.',
     icon: '🎓',
     articles: [
       { id: 'industrial-training' },
@@ -52,8 +52,8 @@ export const contentStructure = {
     ]
   },
   'career-guidance': {
-    title: 'Career Guidance',
-    description: 'Get guidance on making informed decisions about where you want to go.',
+    title: 'Career Compass: Your Path',
+    description: 'Guidance on navigating career options, setting goals, and growing your future.',
     icon: '🧭',
     articles: [
       { id: 'career-progression' },

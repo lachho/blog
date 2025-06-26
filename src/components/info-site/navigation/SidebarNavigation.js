@@ -54,16 +54,16 @@ const SidebarNavigation = () => {
 
   return (
     <div className="w-80 bg-white shadow-lg border-r border-gray-200 fixed left-0 top-16 z-40 hidden lg:block sidebar-scroll" style={{height: 'calc(100vh - 4rem)'}}>
-      <div className="p-4 h-full overflow-y-auto">
-        <h2 className="text-lg font-bold text-gray-800 mb-4">Site Navigation</h2>
+      <div className="p-3 h-full overflow-y-auto">
+        <h2 className="text-lg font-bold text-gray-800 mb-3">Site Navigation</h2>
         
         {/* Home Link */}
-        <div className="mb-2">
+        <div className="mb-1">
           <Link
             to="/"
             className={`flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-colours ${
               isCurrentPage('/') 
-                ? 'bg-blue-100 text-blue-700 border-l-4 border-blue-600' 
+                ? 'bg-green-100 text-green-700 border-l-4 border-green-600' 
                 : 'text-gray-700 hover:bg-gray-100'
             }`}
           >
@@ -75,12 +75,12 @@ const SidebarNavigation = () => {
         </div>
 
         {/* About Link */}
-        <div className="mb-2">
+        <div className="mb-1">
           <Link
             to="/about"
             className={`flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-colours ${
               isCurrentPage('/about') 
-                ? 'bg-blue-100 text-blue-700 border-l-4 border-blue-600' 
+                ? 'bg-green-100 text-green-700 border-l-4 border-green-600' 
                 : 'text-gray-700 hover:bg-gray-100'
             }`}
           >
@@ -92,12 +92,12 @@ const SidebarNavigation = () => {
         </div>
 
         {/* Resume Analyser Link */}
-        <div className="mb-4">
+        <div className="mb-3">
           <Link
             to="/resume-analyser"
             className={`flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-colours ${
               isCurrentPage('/resume-analyser') 
-                ? 'bg-blue-100 text-blue-700 border-l-4 border-blue-600' 
+                ? 'bg-green-100 text-green-700 border-l-4 border-green-600' 
                 : 'text-gray-700 hover:bg-gray-100'
             }`}
           >
@@ -108,9 +108,9 @@ const SidebarNavigation = () => {
           </Link>
         </div>
 
-        <hr className="mb-4" />
+        <hr className="mb-3" />
         
-        <h3 className="text-sm font-semibold text-gray-600 mb-3 uppercase tracking-wide">
+        <h3 className="text-sm font-semibold text-gray-600 mb-2 uppercase tracking-wide">
           Content Library ({Object.keys(contentStructure).length} categories)
         </h3>
 
@@ -118,7 +118,7 @@ const SidebarNavigation = () => {
         {Object.entries(contentStructure).map(([categoryKey, category]) => {
           const isCategoryExpanded = expandedCategories[categoryKey];
           return (
-            <div key={categoryKey} className="mb-2">
+            <div key={categoryKey} className="mb-1">
               {/* Category Header */}
               <div className="flex items-center">
                 <button
@@ -137,9 +137,9 @@ const SidebarNavigation = () => {
                 </button>
                 <Link
                   to={`/articles/${categoryKey}`}
-                  className={`flex items-center justify-between px-4 py-3 text-sm font-medium transition-colours ${
+                  className={`flex items-center justify-between px-3 py-2 text-sm font-medium transition-colours ${
                     currentPath.startsWith(`/articles/${categoryKey}`)
-                      ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-600'
+                      ? 'bg-green-50 text-green-700 border-r-2 border-green-600'
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
@@ -149,7 +149,7 @@ const SidebarNavigation = () => {
               </div>
               {/* Articles */}
               {isCategoryExpanded && (
-                <div className="ml-6 mt-1 space-y-1">
+                <div className="ml-5 mt-1 space-y-1">
                   {category.articles.map((article) => {
                     const articlePath = `/articles/${categoryKey}/${article.id}`;
                     const articleTitle = articleTitles[`${categoryKey}-${article.id}`] || 'Loading...';
@@ -159,7 +159,7 @@ const SidebarNavigation = () => {
                         to={articlePath}
                         className={`flex items-center px-2 py-1 rounded text-sm transition-colours ${
                           isCurrentPage(articlePath)
-                            ? 'bg-blue-100 text-blue-700 border-l-4 border-blue-600 font-medium' 
+                            ? 'bg-green-100 text-green-700 border-l-4 border-green-600 font-medium' 
                             : 'text-gray-600 hover:bg-gray-100 hover:text-gray-800'
                         }`}
                       >

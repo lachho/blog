@@ -64,21 +64,21 @@ const Navigation = () => {
     // The navigation bar now has a single, consistent style
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18">
+        <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <Link 
             to="/" 
-            className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colours"
+            className="text-xl font-bold text-green-600 hover:text-green-800 transition-colours"
           >
             <img 
               src="/logo-black.png" 
               alt="Career Compass Logo" 
-              className="h-16 w-auto" 
+              className="h-14 w-auto" 
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-4">
             {menuItems.map((item) => (
               <div key={item.name} className="relative" ref={item.hasDropdown ? dropdownRef : null}>
                 {item.hasDropdown ? (
@@ -91,24 +91,24 @@ const Navigation = () => {
                       to={item.path}
                       className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colours ${
                         isActivePath(item.path) || location.pathname.startsWith('/articles')
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-white'
+                          ? 'text-green-600 bg-green-50'
+                          : 'text-gray-700 hover:text-green-600 hover:bg-white'
                       }`}
                     >
                       {item.name}
-                      <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="ml-1 h-6 w-6" fill="none" stroke="currentColor" viewBox="0  24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </Link>
                     
                     {isDropdownOpen && (
-                      <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50">
+                      <div className="absolute left-0 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50">
                         <div className="p-2">
                           {Object.entries(contentStructure).map(([categoryKey, category]) => (
                             <Link
                               key={categoryKey}
                               to={`/articles/${categoryKey}`}
-                              className="flex items-center px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colours"
+                              className="flex items-center px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colours"
                             >
                               <span className="mr-2">{category.icon}</span>
                               {category.title}
@@ -123,8 +123,8 @@ const Navigation = () => {
                     to={item.path}
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colours ${
                       isActivePath(item.path)
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-white'
+                        ? 'text-green-600 bg-green-50'
+                        : 'text-gray-700 hover:text-green-600 hover:bg-white'
                     }`}
                   >
                     {item.name}
@@ -165,7 +165,7 @@ const Navigation = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="lg:hidden absolute top-16 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-40">
-          <div className="px-4 py-4 space-y-4">
+          <div className="px-4 py-3 space-y-3">
             {menuItems.map((item) => (
               <div key={item.name}>
                 {item.hasDropdown ? (
@@ -174,8 +174,8 @@ const Navigation = () => {
                       to={item.path}
                       className={`block px-3 py-2 rounded-md text-base font-medium transition-colours ${
                         isActivePath(item.path) || location.pathname.startsWith('/articles')
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                          ? 'text-green-600 bg-green-50'
+                          : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
                       }`}
                     >
                       {item.name}
@@ -187,10 +187,10 @@ const Navigation = () => {
                         <Link
                           key={key}
                           to={`/articles/${key}`}
-                          className={`flex items-center px-6 py-2 rounded-md text-base font-medium transition-colours ${
+                          className={`flex items-center px-5 py-2 rounded-md text-base font-medium transition-colours ${
                             location.pathname.startsWith(`/articles/${key}`)
-                              ? 'text-blue-600 bg-blue-50'
-                              : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                              ? 'text-green-600 bg-green-50'
+                              : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
                           }`}
                         >
                           <span className="mr-2">{category.icon}</span>
@@ -204,8 +204,8 @@ const Navigation = () => {
                     to={item.path}
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colours ${
                       isActivePath(item.path)
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                        ? 'text-green-600 bg-green-50'
+                        : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
                     }`}
                   >
                     {item.name}

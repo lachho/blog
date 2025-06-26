@@ -10,15 +10,15 @@ const ArticleLibraryView = ({
 }) => {
   return (
     <div>
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-6">
         <h1 className="text-4xl font-bold text-gray-900">Article Library</h1>
-        <div className="flex space-x-4">
+        <div className="flex space-x-3">
           <button
             onClick={() => setShowAllArticles(false)}
             className={`px-4 py-2 rounded-lg font-medium transition-colours ${
               !showAllArticles
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-gray-700 hover:bg-blue-50'
+                ? 'bg-green-600 text-white'
+                : 'bg-white text-gray-700 hover:bg-green-50'
             }`}
           >
             Categories
@@ -27,8 +27,8 @@ const ArticleLibraryView = ({
             onClick={() => setShowAllArticles(true)}
             className={`px-4 py-2 rounded-lg font-medium transition-colours ${
               showAllArticles
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-gray-700 hover:bg-blue-50'
+                ? 'bg-green-600 text-white'
+                : 'bg-white text-gray-700 hover:bg-green-50'
             }`}
           >
             All Articles
@@ -46,18 +46,18 @@ const ArticleLibraryView = ({
 };
 
 const CategoryGridView = () => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
     {Object.entries(contentStructure).map(([categoryKey, category]) => (
       <Link
         key={categoryKey}
         to={`/articles/${categoryKey}`}
-        className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+        className="block p-5 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
       >
-        <div className="flex items-center mb-4">
+        <div className="flex items-center mb-3">
           <span className="text-3xl mr-4">{category.icon}</span>
           <h2 className="text-xl font-bold text-gray-900">{category.title}</h2>
         </div>
-        <p className="text-gray-600 mb-4">{category.description}</p>
+        <p className="text-gray-600 mb-3">{category.description}</p>
         <div className="text-sm text-gray-500">
           {category.articles.length} articles
         </div>
@@ -67,16 +67,16 @@ const CategoryGridView = () => (
 );
 
 const AllArticlesView = ({ articleMetadata }) => (
-  <div className="space-y-6">
+  <div className="space-y-5">
     {Object.entries(contentStructure).map(([categoryKey, category]) => (
       <div key={categoryKey} className="bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
+        <div className="bg-gray-50 px-5 py-3 border-b border-gray-200">
           <div className="flex items-center">
             <span className="text-2xl mr-3">{category.icon}</span>
             <h2 className="text-xl font-bold text-gray-900">{category.title}</h2>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {category.articles.map((article) => {
             const metadata = articleMetadata[`${categoryKey}-${article.id}`];
             

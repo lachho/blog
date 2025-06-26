@@ -29,17 +29,17 @@ const CategoryCard = ({ categoryKey, category }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-200">
       {/* Category Header */}
-      <div className="p-6">
+      <div className="p-5">
         <div className="flex items-center justify-between">
           <Link
             to={`/articles/${categoryKey}`}
             className="flex-1 text-center group"
           >
-            <div className="text-5xl mb-4">{category.icon}</div>
-            <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colours">
+            <div className="text-5xl mb-3">{category.icon}</div>
+            <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colours">
               {category.title}
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-3">
               {category.description}
             </p>
             <div className="text-sm text-gray-500">
@@ -67,12 +67,12 @@ const CategoryCard = ({ categoryKey, category }) => {
       {/* Articles - Expandable with smooth transition */}
       <div className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-0'}`}>
         <div className="border-t border-gray-200 bg-gray-50">
-          <div className="p-4 space-y-2">
+          <div className="p-3 space-y-1">
             {category.articles.map((article) => (
               <Link
                 key={article.id}
                 to={`/articles/${categoryKey}/${article.id}`}
-                className="flex items-center px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colours"
+                className="flex items-center px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colours"
               >
                 <svg className="mr-2 h-4 w-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.2 3-3.3 3-5.7 0-3.9-3.1-7-7-7z"/>

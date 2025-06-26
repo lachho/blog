@@ -11,12 +11,12 @@ const ArticleCard = ({
 }) => {
   return (
     <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 transform hover:-translate-y-1">
-      <div className="p-6">
-        <div className="flex items-center mb-4">
+      <div className="p-5">
+        <div className="flex items-center mb-3">
           <span className="text-2xl mr-3">
             {contentStructure[article.category].icon}
           </span>
-          <span className="text-sm text-blue-600 font-semibold bg-blue-50 px-3 py-1 rounded-full">
+          <span className="text-sm text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">
             {article.categoryTitle}
           </span>
           {showFeatured && (
@@ -25,13 +25,13 @@ const ArticleCard = ({
             </svg>
           )}
         </div>
-        <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2">
+        <h3 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2">
           {article.title}
         </h3>
-        <p className="text-gray-600 mb-4 line-clamp-3">
+        <p className="text-gray-600 mb-3 line-clamp-3">
           {article.summary}
         </p>
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-3">
           {article.tags.slice(0, 3).map((tag) => (
             showTagButtons && onToggleTag ? (
               <button
@@ -39,8 +39,8 @@ const ArticleCard = ({
                 onClick={() => onToggleTag(tag)}
                 className={`px-3 py-1 text-xs rounded-full transition-colours ${
                   selectedTags && selectedTags.includes(tag)
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700'
+                    ? 'bg-green-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-green-100 hover:text-green-700'
                 }`}
               >
                 {tag}
@@ -57,7 +57,7 @@ const ArticleCard = ({
         </div>
         <Link
           to={article.path}
-          className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colours"
+          className="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition-colours"
         >
           Read Article
           <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
