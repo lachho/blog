@@ -3,6 +3,8 @@ import FileUpload from './FileUpload';
 import AnalysisDashboard from './AnalysisDashboard';
 import Footer from '../info-site/Footer';
 import ExportButtons from './ExportButtons';
+import UnderConstruction from './UnderConstruction';
+import PDCAdvertisement from '../info-site/common/PDCAdvertisement';
 import { parseFile } from '../../utils/fileParser';
 import { analyseResume } from '../../utils/resumeAnalyser';
 
@@ -36,7 +38,10 @@ const MainPage = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen font-sans flex flex-col">
+    <div className="bg-gray-50 min-h-screen font-sans flex flex-col relative">
+      {/* Under Construction Overlay */}
+      <UnderConstruction />
+      
       <div className="container mx-auto px-4 py-8 md:py-12 flex-grow">
         
         <header className="text-center mb-8 md:mb-12">
@@ -108,6 +113,9 @@ const MainPage = () => {
         </main>
         
       </div>
+      
+      {/* PDC Advertisement */}
+      <PDCAdvertisement />
       
       <Footer />
     </div>

@@ -10,6 +10,7 @@ import InfoHomePage from './components/info-site/InfoHomePage';
 import ContentPage from './components/info-site/ContentPage';
 import SearchResults from './components/info-site/SearchResults';
 import AboutPage from './components/info-site/AboutPage';
+import PDCPage from './components/info-site/PDCPage';
 
 function Layout() {
   const location = useLocation();
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <AboutPage />
+      },
+      {
+        path: "pdc",
+        element: <PDCPage />
       },
       {
         path: "resume-analyser",

@@ -2,6 +2,9 @@ import React from 'react';
 import Footer from './Footer';
 import HeroSection from './home/HeroSection';
 import MainContent from './home/MainContent';
+import JourneyTimeline from './home/JourneyTimeline';
+import AboutMeSection from './home/AboutMeSection';
+import PDCAdvertisement from './common/PDCAdvertisement';
 
 const InfoHomePage = () => {
   const scrollToContentHub = () => {
@@ -16,10 +19,17 @@ const InfoHomePage = () => {
       {/* Hero Section */}
       <HeroSection onExploreClick={scrollToContentHub} />
 
-      {/* Main Content Section */}
+      {/* Journey Timeline Section */}
       <div id="content-discovery-hub">
         <MainContent/>
+        <JourneyTimeline />
       </div>
+
+      {/* About Me Section */}
+      <AboutMeSection />
+
+      {/* PDC Advertisement */}
+      <PDCAdvertisement />
 
       <Footer />
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { contentStructure } from '../../../data/contentStructure';
+import { getArticleImage } from '../../../data/stockImages';
 
 const ArticleCard = ({ 
   article, 
@@ -9,8 +10,31 @@ const ArticleCard = ({
   showFeatured = false,
   showTagButtons = true 
 }) => {
+  const imageUrl = getArticleImage(article.category, article.id);
+  
   return (
     <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 transform hover:-translate-y-1">
+      {/* Article Image */}
+      <div className="relative h-48 overflow-hidden">
+        <img
+          src={imageUrl}
+          alt={article.title}
+          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          onError={(e) => {
+            e.target.src = 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+        {showFeatured && (
+          <div className="absolute top-3 right-3 bg-yellow-500 text-white px-2 py-1 rounded-full flex items-center">
+            <svg className="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <span className="text-xs font-semibold">Featured</span>
+          </div>
+        )}
+      </div>
+
       <div className="p-5">
         <div className="flex items-center mb-3">
           <span className="text-2xl mr-3">
@@ -19,11 +43,6 @@ const ArticleCard = ({
           <span className="text-sm text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">
             {article.categoryTitle}
           </span>
-          {showFeatured && (
-            <svg className="h-5 w-5 text-yellow-500 ml-auto" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
-          )}
         </div>
         <h3 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2">
           {article.title}

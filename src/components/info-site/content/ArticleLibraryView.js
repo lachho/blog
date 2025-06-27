@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { contentStructure } from '../../../data/contentStructure';
 import ArticleCard from '../home/ArticleCard';
+import JourneyTimeline from '../home/JourneyTimeline';
 
 const ArticleLibraryView = ({ 
   showAllArticles, 
@@ -21,7 +22,7 @@ const ArticleLibraryView = ({
                 : 'bg-white text-gray-700 hover:bg-green-50'
             }`}
           >
-            Categories
+            Journey View
           </button>
           <button
             onClick={() => setShowAllArticles(true)}
@@ -37,7 +38,7 @@ const ArticleLibraryView = ({
       </div>
 
       {!showAllArticles ? (
-        <CategoryGridView />
+        <JourneyTimelineView />
       ) : (
         <AllArticlesView articleMetadata={articleMetadata} />
       )}
@@ -45,24 +46,21 @@ const ArticleLibraryView = ({
   );
 };
 
-const CategoryGridView = () => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-    {Object.entries(contentStructure).map(([categoryKey, category]) => (
-      <Link
-        key={categoryKey}
-        to={`/articles/${categoryKey}`}
-        className="block p-5 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
-      >
-        <div className="flex items-center mb-3">
-          <span className="text-3xl mr-4">{category.icon}</span>
-          <h2 className="text-xl font-bold text-gray-900">{category.title}</h2>
-        </div>
-        <p className="text-gray-600 mb-3">{category.description}</p>
-        <div className="text-sm text-gray-500">
-          {category.articles.length} articles
-        </div>
-      </Link>
-    ))}
+const JourneyTimelineView = () => (
+  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-green-50 to-blue-50">
+      <h2 className="text-2xl font-bold text-gray-800 mb-2">
+        Where are you along your journey? 🗺️
+      </h2>
+      <p className="text-gray-600">
+        Follow this step-by-step pathway to career success. Each stage builds on the previous, 
+        guiding you from university through to landing your dream role.
+      </p>
+    </div>
+    
+    <div className="p-6">
+      <JourneyTimeline />
+    </div>
   </div>
 );
 
@@ -76,7 +74,7 @@ const AllArticlesView = ({ articleMetadata }) => (
             <h2 className="text-xl font-bold text-gray-900">{category.title}</h2>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-5">
           {category.articles.map((article) => {
             const metadata = articleMetadata[`${categoryKey}-${article.id}`];
             

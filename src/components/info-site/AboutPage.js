@@ -2,10 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import SocialLinks from './common/SocialLinks';
+import PDCAdvertisement from './common/PDCAdvertisement';
 
 const AboutPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
+      {/* Banner Image */}
+      <div className="w-full h-64 md:h-96 bg-gradient-to-r from-green-400 via-green-500 to-yellow-600 relative overflow-hidden">
+        <img
+          src="/mugshot_24.jpg"
+          alt="Lachlan Ho"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        <div className="absolute bottom-8 left-8 text-white">
+          <h1 className="text-4xl md:text-6xl font-bold mb-2">About Me</h1>
+          <p className="text-lg md:text-xl">Getting to know Lachlan</p>
+        </div>
+      </div>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Hero Section */}
         <div className="text-center mb-10">
@@ -16,46 +31,60 @@ const AboutPage = () => {
           </p>
         </div>
 
-        {/* Mission Section */}
+        {/* Mission Section with Profile Photo */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-5">Hi, I'm Lachlan</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-5">
-            I'm a final year computer science/civil engineering undergraduate at UNSW. Next year, I'm starting a 
-            graduate role as a full stack developer (not civil ik) at Macquarie Bank. In my free time I like to go to 
-            the gym and boulder, and recently took up an interest in drawing. 
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-5">
-            I understand the struggle of finding a job and really wished I had something like this when I was younger, 
-            so here it is!
-          </p>
+          <div className="flex flex-col md:flex-row gap-6">
+            {/* Profile Photo */}
+            <div className="flex-shrink-0 text-center md:text-left">
+              <img
+                src="/mugshot_24.jpg"
+                alt="Lachlan Ho"
+                className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-green-100 mx-auto md:mx-0"
+              />
+            </div>
+            
+            {/* Content */}
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold text-gray-900 mb-5">Hi, I'm Lachlan</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-5">
+                I'm a final year computer science/civil engineering undergraduate at UNSW. Next year, I'm starting a 
+                graduate role as a full stack developer (not civil ik) at Macquarie Bank. In my free time I like to go to 
+                the gym and boulder, and recently took up an interest in drawing. 
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-5">
+                I understand the struggle of finding a job and really wished I had something like this when I was younger, 
+                so here it is!
+              </p>
 
-          <p className="text-lg text-gray-700 leading-relaxed">
-            How reliable is the information on this site?
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-3">
-            Everything here is basically my heavily researched opinion, accumulated wisdom from myself and those before me gathered from years of research, practice and failures. 
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-3">
-            Take everything with a grain of salt, and question everything I say. If you think my advice isn't going to work for you, 100% do not listen to me. This may have worked for me, but you're not me! You know best for you so trust your gut. Additionally, times have changed (about only 6 months) but still. 
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            However, some stats about me over the past year:
-          </p>
-          <ul className="list-disc list-inside mb-3">
-            <li>Job Applications submitted: 70</li>
-            <li>Online Assessments/Interviews completed: 47</li>
-            <li>Interviews: 11</li>
-            <li>Networking Events attended: 10</li>
-            <li>Rejections: 40</li>
-            <li>Times Ghosted: 20+</li>
-            <li>Offers: 2</li>
-          </ul>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            I've experienced the ups and downs and got through it in the end. 
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Hang in there and I believe in you. 
-          </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                How reliable is the information on this site?
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-3">
+                Everything here is basically my heavily researched opinion, accumulated wisdom from myself and those before me gathered from years of research, practice and failures. 
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-3">
+                Take everything with a grain of salt, and question everything I say. If you think my advice isn't going to work for you, 100% do not listen to me. This may have worked for me, but you're not me! You know best for you so trust your gut. Additionally, times have changed (about only 6 months) but still. 
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                However, some stats about me over the past year:
+              </p>
+              <ul className="list-disc list-inside mb-3">
+                <li>Job Applications submitted: 70</li>
+                <li>Online Assessments/Interviews completed: 47</li>
+                <li>Interviews: 11</li>
+                <li>Networking Events attended: 10</li>
+                <li>Rejections: 40</li>
+                <li>Times Ghosted: 20+</li>
+                <li>Offers: 2</li>
+              </ul>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                I've experienced the ups and downs and got through it in the end. 
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Hang in there and I believe in you. 
+              </p>
+            </div>
+          </div>
         </div>
 
       {/* Social Links Section */}
@@ -205,6 +234,9 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+      
+      {/* PDC Advertisement */}
+      <PDCAdvertisement />
       
       <Footer />
     </div>

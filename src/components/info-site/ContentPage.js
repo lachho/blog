@@ -5,6 +5,8 @@ import { contentStructure, getBreadcrumbs, getArticleMetaData } from '../../data
 import { LoadingSpinner, ErrorBoundary, ErrorDisplay } from './common';
 import { ArticleLibraryView, CategoryView, ArticleView } from './content';
 import Breadcrumb from './navigation/Breadcrumb';
+import PDCAdvertisement from './common/PDCAdvertisement';
+import Footer from './Footer';
 
 const ContentPage = () => {
   const { '*': fullPath } = useParams();
@@ -95,7 +97,8 @@ const ContentPage = () => {
               ...articleData, 
               id: articleId, 
               content: marked(articleData.content),
-              tags: Array.isArray(articleData.tags) ? articleData.tags : []
+              tags: Array.isArray(articleData.tags) ? articleData.tags : [],
+              categoryKey
             };
             setPageData({ type: 'article', article, category, categoryKey });
           }
@@ -148,6 +151,12 @@ const ContentPage = () => {
 
         {error && <ErrorDisplay error={error} />}
       </div>
+
+      {/* PDC Advertisement */}
+      <PDCAdvertisement />
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
