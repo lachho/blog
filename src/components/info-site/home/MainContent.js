@@ -48,7 +48,7 @@ const MainContent = () => {
               to="/articles"
               className="inline-flex items-center px-8 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colours shadow-lg"
             >
-              View All Articles
+              Explore All
               <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -58,7 +58,7 @@ const MainContent = () => {
       </section>
 
       {/* Explore Categories Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -79,7 +79,7 @@ const MainContent = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

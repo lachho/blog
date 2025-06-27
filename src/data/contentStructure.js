@@ -1,5 +1,25 @@
 // Content structure for the informational website
 export const contentStructure = {
+  'university': {
+    title: 'University Life',
+    description: 'Everything you need to know academically, socially, and professionally.',
+    icon: '🎓',
+    articles: [
+      { id: 'industrial-training' },
+      { id: 'academics' },
+    ]
+  },
+  'setting-up-for-success': {
+    title: 'Building a Strong Foundation',
+    description: 'Set yourself up for success with these top tips no one wants to tell you.',
+    icon: '🚀',
+    articles: [
+      { id: 'general-advice' },
+      { id: 'extracurricular-activities' },
+      { id: 'networking' },
+      { id: 'linkedin' },
+    ]
+  },
   'resume-and-cover-letter': {
     title: 'Stand Out: Resumes & Cover Letters',
     description: 'Unlock the secrets to crafting resumes and cover letters that get noticed and land interviews.',
@@ -29,26 +49,6 @@ export const contentStructure = {
       { id: 'online-assessments' },
       { id: 'group-assessments' },
       { id: 'interviews' },
-    ]
-  },
-  'setting-up-for-success': {
-    title: 'Building a Strong Foundation',
-    description: 'Set yourself up for success with these top tips no one wants to tell you.',
-    icon: '🚀',
-    articles: [
-      { id: 'general-advice' },
-      { id: 'extracurricular-activities' },
-      { id: 'networking' },
-      { id: 'linkedin' },
-    ]
-  },
-  'university': {
-    title: 'University Life',
-    description: 'Everything you need to know academically, socially, and professionally.',
-    icon: '🎓',
-    articles: [
-      { id: 'industrial-training' },
-      { id: 'academics' },
     ]
   },
   'career-guidance': {

@@ -3,20 +3,24 @@ import { Link } from 'react-router-dom';
 
 const PDCAdvertisement = () => {
   return (
-    <div className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 py-12 px-4 mx-4 rounded-2xl shadow-2xl mb-8">
+    
+    <div className="bg-gradient-to-r  py-12 px-4 mx-4 rounded-2xl shadow-2xl mb-8 bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: `linear-gradient(rgba(20, 184, 166, 0.6), rgba(34, 197, 94, 0.6), rgba(163, 230, 53, 0.6)), url('/hero.png')`
+    }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Found this useful? ✨
           </h2>
           <h3 className="text-2xl md:text-3xl font-semibold mb-6">
-            Check out PDC for 3 days of upskilling and fun! 🚀
+            Come to CEVSOC's Professional Development Camp for 3 days of upskilling and fun! 🚀
           </h3>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
             {/* PDC Logo/Badge */}
             <div className="bg-white rounded-full p-6 shadow-lg">
-              <div className="text-4xl md:text-5xl font-bold text-orange-500">
+              <div className="text-4xl md:text-5xl font-bold text-green-800">
                 PDC
               </div>
               <div className="text-sm text-gray-600 font-medium mt-1">
@@ -43,7 +47,7 @@ const PDCAdvertisement = () => {
           <div className="space-y-4">
             <Link
               to="/pdc"
-              className="inline-block px-8 py-4 bg-white text-orange-500 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg"
+              className="inline-block px-8 py-4 bg-white text-green-800 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg"
             >
               Learn More & Register 📝
             </Link>
@@ -51,7 +55,7 @@ const PDCAdvertisement = () => {
             {/* CEVSoc Affiliation */}
             <div className="flex items-center justify-center gap-3 mt-6">
               <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                <span className="text-sm font-medium">🤝 Affiliated with CEVSoc</span>
+                <span className="text-sm font-medium">💚 Affiliated with CEVSOC</span>
               </div>
             </div>
           </div>

@@ -16,8 +16,8 @@ const AboutPage = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
         <div className="absolute bottom-8 left-8 text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-2">About Me</h1>
-          <p className="text-lg md:text-xl">Getting to know Lachlan</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-2 text-gray-200">About Me</h1>
+          <p className="text-lg md:text-xl">A little bit about me</p>
         </div>
       </div>
 
@@ -35,11 +35,12 @@ const AboutPage = () => {
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
           <div className="flex flex-col md:flex-row gap-6">
             {/* Profile Photo */}
-            <div className="flex-shrink-0 text-center md:text-left">
+            <div className="relative w-32 h-32 rounded-full shadow-lg border-4 border-green-100 overflow-hidden mx-auto md:mx-0">
               <img
-                src="/mugshot_24.jpg"
+                src="/mugshot_23.jpg"
                 alt="Lachlan Ho"
-                className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-green-100 mx-auto md:mx-0"
+                className="w-full h-full object-cover"
+                style={{ transform: 'scale(1.5)  translate(0%, 12%)' , transformOrigin: 'centre centre' }}
               />
             </div>
             

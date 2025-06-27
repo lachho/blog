@@ -8,11 +8,12 @@ const AboutMeSection = () => {
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Photo */}
-            <div className="flex-shrink-0">
+            <div className="relative w-40 h-40 rounded-full shadow-lg border-4 border-green-100 overflow-hidden mx-auto md:mx-0">
               <img
-                src="/mugshot_24.jpg"
+                src="/mugshot_23.jpg"
                 alt="Lachlan Ho"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-green-100"
+                className="w-full h-full object-cover"
+                style={{ transform: 'scale(1.5)  translate(0%, 12%)' , transformOrigin: 'centre centre' }}
               />
             </div>
             

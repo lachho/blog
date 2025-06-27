@@ -12,37 +12,31 @@ const MainPage = () => {
   const [analysisResults, setAnalysisResults] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [showModal, setShowModal] = useState(false);
+
+  const handleInteraction = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowModal(true);
+  };
 
   const handleFileSelect = async (files) => {
-    if (!files || files.length === 0) {
-      setError('Please select a file.');
-      return;
-    }
-    const file = files[0];
-
-    setIsLoading(true);
-    setAnalysisResults(null);
-    setError('');
-
-    try {
-      const parsingResult = await parseFile(file);
-      const results = await analyseResume(parsingResult);
-      setAnalysisResults(results);
-    } catch (err) {
-      console.error("An error occurred:", err);
-      const errorMessage = typeof err === 'string' ? err : 'Failed to process the file. Please try again.';
-      setError(errorMessage);
-    } finally {
-      setIsLoading(false);
-    }
+    handleInteraction({ preventDefault: () => {}, stopPropagation: () => {} });
   };
 
   return (
     <div className="bg-gray-50 min-h-screen font-sans flex flex-col relative">
-      {/* Under Construction Overlay */}
-      <UnderConstruction />
+      {/* Interactive Overlay */}
+      <div 
+        className="absolute inset-0 z-40 cursor-pointer"
+        onClick={handleInteraction}
+        style={{ pointerEvents: 'auto' }}
+      />
       
-      <div className="container mx-auto px-4 py-8 md:py-12 flex-grow">
+      {/* Under Construction Modal */}
+      <UnderConstruction isOpen={showModal} onClose={() => setShowModal(false)} />
+      
+      <div className="container mx-auto px-4 py-8 md:py-12 flex-grow relative z-30" style={{ pointerEvents: 'none' }}>
         
         <header className="text-center mb-8 md:mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800">
@@ -115,9 +109,13 @@ const MainPage = () => {
       </div>
       
       {/* PDC Advertisement */}
-      <PDCAdvertisement />
+      <div style={{ pointerEvents: 'none' }}>
+        <PDCAdvertisement />
+      </div>
       
-      <Footer />
+      <div style={{ pointerEvents: 'none' }}>
+        <Footer />
+      </div>
     </div>
   );
 };

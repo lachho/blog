@@ -17,8 +17,8 @@ const ArticleView = ({ article }) => {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        <div className="absolute bottom-6 left-6 text-white">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">{article.title}</h1>
+        <div className="absolute bottom-6 left-6 text-black">
+          <h1 className="text-3xl md:text-4xl text-gray-200 font-bold mb-2">{article.title}</h1>
           {article.tags && article.tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {article.tags.slice(0, 3).map((tag) => (

@@ -38,7 +38,7 @@ const HeroSection = ({ onExploreClick }) => {
             to="/pdc"
             className="px-8 py-3 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg inline-block"
           >
-            Buy PDC Tickets
+            Buy My PDC Ticket
           </Link>
         </div>
       </div>

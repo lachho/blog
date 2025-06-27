@@ -53,8 +53,7 @@ const JourneyTimelineView = () => (
         Where are you along your journey? 🗺️
       </h2>
       <p className="text-gray-600">
-        Follow this step-by-step pathway to career success. Each stage builds on the previous, 
-        guiding you from university through to landing your dream role.
+        Follow this step-by-step pathway to landing your dream role.
       </p>
     </div>
     
@@ -65,16 +64,16 @@ const JourneyTimelineView = () => (
 );
 
 const AllArticlesView = ({ articleMetadata }) => (
-  <div className="space-y-5">
+  <div className="space-y-4">
     {Object.entries(contentStructure).map(([categoryKey, category]) => (
       <div key={categoryKey} className="bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="bg-gray-50 px-5 py-3 border-b border-gray-200">
+        <div className="bg-gray-50 px-4 py-3 border-b border-gray-200">
           <div className="flex items-center">
-            <span className="text-2xl mr-3">{category.icon}</span>
-            <h2 className="text-xl font-bold text-gray-900">{category.title}</h2>
+            <span className="text-xl mr-2">{category.icon}</span>
+            <h2 className="text-lg font-bold text-gray-900">{category.title}</h2>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
           {category.articles.map((article) => {
             const metadata = articleMetadata[`${categoryKey}-${article.id}`];
             
