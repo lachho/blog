@@ -85,6 +85,81 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  React.useEffect(() => {
+    // Delay Ko-fi widget loading to prevent initial runtime errors
+    const loadKofiWidget = () => {
+      // Check if Ko-fi script is already loaded
+      if (document.querySelector('script[src*="ko-fi.com"]') || window.kofiWidgetOverlay) {
+        // If script already exists or widget is already loaded, just initialize
+        if (window.kofiWidgetOverlay) {
+          try {
+            window.kofiWidgetOverlay.draw('lachlanho', {
+              'type': 'floating-chat',
+              'floating-chat.donateButton.text': 'Support Me',
+              'floating-chat.donateButton.background-color': '#5cb85c',
+              'floating-chat.donateButton.text-color': '#fff'
+            });
+          } catch (error) {
+            console.warn('Ko-fi widget initialization failed:', error);
+          }
+        }
+        return;
+      }
+
+      // Load Ko-fi widget script
+      const script = document.createElement('script');
+      script.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
+      script.async = true;
+      script.defer = true;
+      
+      script.onload = () => {
+        // Add a longer delay to ensure everything is ready
+        setTimeout(() => {
+          try {
+            if (window.kofiWidgetOverlay) {
+              window.kofiWidgetOverlay.draw('lachlanho', {
+                'type': 'floating-chat',
+                'floating-chat.donateButton.text': 'Support Me',
+                'floating-chat.donateButton.background-color': '#5cb85c',
+                'floating-chat.donateButton.text-color': '#fff'
+              });
+            }
+          } catch (error) {
+            console.warn('Ko-fi widget initialization failed:', error);
+          }
+        }, 500); // Increased delay to 500ms
+      };
+      
+      script.onerror = (error) => {
+        console.warn('Ko-fi script failed to load:', error);
+      };
+      
+      try {
+        document.head.appendChild(script);
+      } catch (error) {
+        console.warn('Ko-fi script append failed:', error);
+      }
+    };
+
+    // Wait for page to be fully loaded before loading Ko-fi
+    if (document.readyState === 'complete') {
+      // Page already loaded, wait a bit more then load Ko-fi
+      setTimeout(loadKofiWidget, 1000);
+    } else {
+      // Wait for page to finish loading
+      const handleLoad = () => {
+        setTimeout(loadKofiWidget, 1000);
+        window.removeEventListener('load', handleLoad);
+      };
+      window.addEventListener('load', handleLoad);
+      
+      // Cleanup function
+      return () => {
+        window.removeEventListener('load', handleLoad);
+      };
+    }
+  }, []);
+
   return <RouterProvider router={router} />;
 }
 

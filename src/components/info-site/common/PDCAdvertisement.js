@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const PDCAdvertisement = () => {
   return (
     
-    <div className="bg-gradient-to-r  py-12 px-4 mx-4 rounded-2xl shadow-2xl mb-8 bg-cover bg-center bg-no-repeat"
+    <div className="bg-gradient-to-r  py-12 px-4 mx-4 rounded-2xl shadow-2xl mb-8 bg-cover bg-center_15 bg-no-repeat"
     style={{
-      backgroundImage: `linear-gradient(rgba(17, 138, 124, 0.6), rgba(24, 139, 66, 0.6), rgba(114, 160, 39, 0.6)), url('/hero.png')`
+      backgroundImage: `linear-gradient(rgba(17, 138, 124, 0.6), rgba(24, 139, 66, 0.6), rgba(114, 160, 39, 0.6)), url('/images/hero.png')`
     }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center text-white">
@@ -19,18 +19,25 @@ const PDCAdvertisement = () => {
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
             {/* PDC Logo/Badge */}
-            <div className="bg-white rounded-full p-6 shadow-lg">
-              <div className="text-4xl md:text-5xl font-bold text-green-800">
+            <div className="flex-shrink-0">
+              <img 
+                src="/images/PDC_CP.png" 
+                alt="PDC Professional Development Camp" 
+                className="w-48 h-auto md:w-80 object-contain mx-auto"
+                style={{ maxHeight: '400px' }}
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'inline-block';
+                }}
+              />
+              <div className="text-2xl md:text-3xl font-bold text-green-800 text-center mt-2 hidden">
                 PDC
-              </div>
-              <div className="text-sm text-gray-600 font-medium mt-1">
-                Professional<br />Development<br />Camp
               </div>
             </div>
             
             {/* Event Details */}
             <div className="text-center md:text-left">
-              <div className="bg-white bg-opacity-20 rounded-lg p-4 mb-4">
+              <div className="bg-white bg-opacity-20 rounded-lg p-4 mb-4" style={{ minHeight: '200px' }}>
                 <h4 className="text-lg font-semibold mb-2">🗓️ What to Expect:</h4>
                 <ul className="text-sm space-y-1">
                   <li>• Weekend-long intensive workshop</li>

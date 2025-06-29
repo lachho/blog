@@ -9,11 +9,14 @@ const Footer = () => {
       <div className="container mx-auto max-w-4xl">
         
         {/* CEVSOC Affiliation Section */}
-        <div className="mb-6 text-center">
-          <h3 className="text-lg font-semibold mb-4 text-gray-400">🤝 Proudly Affiliated With</h3>
+        <div className="text-center">
           <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="text-center">
+              <div className="text-xl font-semibold text-green-400"> 🤝 Proudly Affiliated With CEVSOC 💚</div>
+              <div className="text-sm text-gray-400">The Civil & Environmental Engineering Society UNSW</div>
+            </div>
             <img 
-              src="/cevsoc_logo.avif" 
+              src="/images/cevsoc_logo.avif" 
               alt="CEVSOC Logo" 
               className="w-16 h-16 object-contain"
               onError={(e) => {
@@ -21,11 +24,6 @@ const Footer = () => {
                 e.target.nextSibling.style.display = 'inline-block';
               }}
             />
-            <span className="text-2xl font-bold text-green-400 hidden">CEVSOC</span>
-            <div className="text-center">
-              <div className="text-xl font-semibold text-green-400">CEVSOC</div>
-              <div className="text-sm text-gray-400">Civil & Environmental Engineering Society</div>
-            </div>
           </div>
         </div>
 
@@ -55,7 +53,7 @@ const Footer = () => {
 
         {/* Social Links Section */}
         <div className="text-center mb-6">
-          <h3 className="text-lg font-semibold mb-4 text-gray-400">🔗 Connect With Me</h3>
+          <h3 className="text-lg font-semibold mb-4 text-gray-400">🔗 Got Feedback or Questions? Connect With Me</h3>
           <SocialLinks 
             layout="horizontal"
             size="medium"

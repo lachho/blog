@@ -10,7 +10,7 @@ const AboutPage = () => {
       {/* Banner Image */}
       <div className="w-full h-64 md:h-96 bg-gradient-to-r from-green-400 via-green-500 to-yellow-600 relative overflow-hidden">
         <img
-          src="/mugshot_24.jpg"
+          src="/images/mugshot_24.jpg"
           alt="Lachlan Ho"
           className="w-full h-full object-cover object-center"
         />
@@ -37,7 +37,7 @@ const AboutPage = () => {
             {/* Profile Photo */}
             <div className="relative w-32 h-32 rounded-full shadow-lg border-4 border-green-100 overflow-hidden mx-auto md:mx-0">
               <img
-                src="/mugshot_23.jpg"
+                src="/images/mugshot_23.jpg"
                 alt="Lachlan Ho"
                 className="w-full h-full object-cover scale-150 translate-x-0 translate-y-[12%] origin-center"
               />

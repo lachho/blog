@@ -1,6 +1,6 @@
 ---
-title: "Grades & WAM"
-summary: "Does WAM even matter?"
+title: "Grades & WAM: What Really Matters?"
+summary: "The truth about grades, WAM, and your career prospects."
 tags: ["university", "study", "grades"]
 ---
 ## What is WAM?

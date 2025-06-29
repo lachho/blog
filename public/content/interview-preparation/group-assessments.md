@@ -1,6 +1,6 @@
 ---
-title: "Group Assessments"
-summary: "Collaborate effectively and stand out in group assessments."
+title: "Stand out in Group Assessments"
+summary: "How to collaborate, contribute, and stand out in group tasks, without seeming like a jerk."
 tags: ["interview", "assessment", "group work"]
 ---
 

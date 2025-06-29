@@ -10,7 +10,7 @@ const AboutMeSection = () => {
             {/* Photo */}
             <div className="relative w-40 h-40 rounded-full shadow-lg border-4 border-green-100 overflow-hidden mx-auto md:mx-0">
               <img
-                src="/mugshot_23.jpg"
+                src="/images/mugshot_23.jpg"
                 alt="Lachlan Ho"
                 className="w-full h-full object-cover"
                 style={{ transform: 'scale(1.5)  translate(0%, 12%)' , transformOrigin: 'centre centre' }}

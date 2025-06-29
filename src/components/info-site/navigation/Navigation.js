@@ -60,7 +60,7 @@ const Navigation = () => {
             className="text-xl font-bold text-green-600 hover:text-green-800 transition-colors"
           >
             <img 
-              src="/logo-black.png" 
+              src="/images/logo-black.png" 
               alt="Career Compass Logo" 
               className="h-14 w-auto" 
             />
@@ -128,7 +128,17 @@ const Navigation = () => {
               size="medium"
               className="ml-4"
             />
+          <img 
+            src="/images/cevsoc_logo.avif" 
+            alt="CEVSOC Logo" 
+            className="w-14 h-14 object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'inline-block';
+            }}
+          />
           </div>
+
 
           {/* Mobile menu button */}
           <div className="lg:hidden">

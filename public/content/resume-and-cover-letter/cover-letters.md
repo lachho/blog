@@ -1,6 +1,6 @@
 ---
-title: "Cover Letters"
-summary: "How to craft a meaningful cover letter that get you noticed."
+title: "Cover Letters: Leaving an Impact"
+summary: "Must Dos to craft cover letters that get noticed, not ignored."
 tags: ["cover letter", "writing", "job application"]
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "My Best Advice"
-summary: "My biggest takeaways 5 years into the game."
+title: "My Top Lessons: 5 Years In"
+summary: "The biggest insider takeaways I wish I knew when I started out."
 tags: ["career", "advice", "success"]
 ---
 ## My Harsh Truth

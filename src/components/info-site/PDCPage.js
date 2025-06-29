@@ -25,22 +25,27 @@ const PDCPage = () => {
         </div>
       </div>
 
+      <div className="flex-shrink-0">
+          <img 
+            src="/images/PDC_CP.png" 
+            alt="PDC Professional Development Camp" 
+            className="object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'inline-block';
+            }}
+          />
+        </div>
       {/* Main Content with bottom padding to account for fixed CTA */}
       <div className="pb-20">
         {/* Hero Section */}
         <div 
           className="relative py-10 px-4 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(20, 184, 166, 0.4), rgba(34, 197, 94, 0.4), rgba(163, 230, 53, 0.4)), url('/hero.png')`
+            backgroundImage: `linear-gradient(rgba(20, 184, 166, 0.4), rgba(34, 197, 94, 0.4), rgba(163, 230, 53, 0.4)), url('/images/hero-green.png')`
           }}
         >
           <div className="max-w-6xl mx-auto text-center text-white relative z-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              CEVSOC Presents:
-            </h2>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Professional Development Camp
-            </h1>
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               3 Days of Upskilling & Fun! 🚀
             </h2>
@@ -67,6 +72,7 @@ const PDCPage = () => {
             </div>
           </div>
         </div>
+
 
         {/* What You'll Learn Section */}
         <div className="py-16 px-4">
@@ -127,50 +133,6 @@ const PDCPage = () => {
           </div>
         </div>
 
-        {/* Workshop Schedule Section */}
-        {/* <div className="py-16 px-4 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-              Expect to Learn 📅
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 border-l-4 border-green-500">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">Day 1: Foundation Building</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Welcome & Networking Breakfast</li>
-                  <li>• Career Planning & Goal Setting Workshop</li>
-                  <li>• Resume Writing Masterclass</li>
-                  <li>• Industry Panel Discussion</li>
-                  <li>• Evening Social Event</li>
-                </ul>
-              </div>
-              
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-500">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">Day 2: Skills Development</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Interview Skills Workshop</li>
-                  <li>• Technical Skills Sessions</li>
-                  <li>• Professional Communication Training</li>
-                  <li>• Mock Interview Practice</li>
-                  <li>• Group Project & Team Building</li>
-                </ul>
-              </div>
-              
-              <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border-l-4 border-purple-500">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">Day 3: Application & Networking</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Networking Strategies Workshop</li>
-                  <li>• LinkedIn Optimisation Session</li>
-                  <li>• Industry Speed Networking</li>
-                  <li>• Final Presentations</li>
-                  <li>• Celebration & Graduation Ceremony</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         {/* CEVSOC Affiliation Section */}
         <div className="py-16 px-4 bg-gray-100">
           <div className="max-w-4xl mx-auto text-center">
@@ -186,7 +148,7 @@ const PDCPage = () => {
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="text-center">
                   <img 
-                    src="/cevsoc_logo.avif" 
+                    src="/images/cevsoc_logo.avif" 
                     alt="CEVSOC Logo" 
                     className="w-24 h-24 mx-auto mb-3 object-contain"
                     onError={(e) => {
@@ -208,7 +170,10 @@ const PDCPage = () => {
         </div>
 
         {/* Registration Section */}
-        <div className="py-16 px-4 bg-gradient-to-r from-teal-800 via-green-500 to-lime-500">
+        <div className="py-16 px-4 bg-gradient-to-r from-teal-800 via-green-500 to-lime-500 bg-cover bg-centre_15 bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(rgba(20, 184, 166, 0.4), rgba(34, 197, 94, 0.4), rgba(163, 230, 53, 0.4)), url('/images/hero.png')`
+        }}>
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-4xl font-bold mb-8">
               Ready to Accelerate Your Career? 🚀

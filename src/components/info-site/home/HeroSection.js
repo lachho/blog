@@ -7,10 +7,24 @@ const HeroSection = ({ onExploreClick }) => {
     <section 
       className="h-screen bg-cover bg-[center_15%] text-white flex items-center justify-center w-full pb-16 sm:pb-24"
       style={{
-        backgroundImage: `linear-gradient(rgba(20, 184, 166, 0.2), rgba(34, 197, 94, 0.2), rgba(163, 230, 53, 0.2)), url('/hero-green.png')`
+        backgroundImage: `linear-gradient(rgba(20, 184, 166, 0.2), rgba(34, 197, 94, 0.2), rgba(163, 230, 53, 0.2)), url('/images/hero-green.png')`
       }}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="flex items-center justify-center">
+          <img 
+            src="/images/cevsoc_logo.avif" 
+            alt="CEVSOC Logo" 
+            className="w-14 h-14 object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'inline-block';
+            }}
+          />
+          <div className="text-xl md:text-2xl leading-relaxed text-white"> 
+            <strong>CEVSOC Presents:</strong>
+          </div>
+        </div>
         <h1 className="text-5xl md:text-7xl font-extrabold mb-5 text-white">
           Career Compass
         </h1>

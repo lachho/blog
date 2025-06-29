@@ -1,6 +1,6 @@
 ---
-title: "Resume Masterclass - Consolidation"
-summary: "How to consolidate your resume into a powerful short document."
+title: "Resume Masterclass - The Art of Distillation"
+summary: "Consolidate your experiences into a powerful short document with what recruiters really want to see."
 tags: ["resume", "masterclass", "consolidation"]
 ---
 Hopefully, if you added every single experience in your life to your resume, you will have a resume that is a few pages long. All work experience is good. All volunteer experience is also good. Keep this master resume with all your experiences, achievements and skills saved for reference. This means you have lots of experiences in which you can draw on to show yourself off. 

@@ -10,8 +10,8 @@ export const contentStructure = {
     ]
   },
   'setting-up-for-success': {
-    title: 'Building a Strong Foundation',
-    description: 'Set yourself up for success with these top tips no one wants to tell you.',
+    title: 'Building the Foundations for Success',
+    description: 'Set yourself up for success with these smart moves before you even hit apply.',
     icon: '🚀',
     articles: [
       { id: 'general-advice' },
@@ -52,7 +52,7 @@ export const contentStructure = {
     ]
   },
   'career-guidance': {
-    title: 'Career Compass: Your Path',
+    title: 'Career Compass: Your Path [Coming Soon]',
     description: 'Guidance on navigating career options, setting goals, and growing your future.',
     icon: '🧭',
     articles: [
@@ -78,7 +78,7 @@ export const featuredArticles = [
     categoryTitle: 'Events',
     path: '/pdc',
     tags: ['events', 'networking', 'professional-development', 'cevsoc'],
-    image: '/cevsoc_logo.avif',
+    image: '/images/PDC_CP.png',
     readTime: '5 min read'
   },
   { categoryKey: 'job-application-process', articleId: 'helpful-resources-and-links' },

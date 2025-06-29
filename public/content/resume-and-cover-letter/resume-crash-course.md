@@ -1,6 +1,6 @@
 ---
 title: "Resume Crash Course"
-summary: "Never made a resume before? You've come to the right place."
+summary: "Never written a resume before? You've come to the right place."
 tags: ["resume", "writing", "job application"]
 ---
 
