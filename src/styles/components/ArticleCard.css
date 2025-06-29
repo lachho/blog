@@ -1,0 +1,77 @@
+/* Article Card Component Styles */
+
+.article-card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 transform hover:scale-105;
+}
+
+.article-card-image {
+  @apply w-full h-48 object-cover;
+}
+
+.article-card-featured-badge {
+  @apply absolute top-2 right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full flex items-center space-x-1 shadow-lg;
+}
+
+.article-card-featured-icon {
+  @apply h-3 w-3;
+}
+
+.article-card-featured-text {
+  @apply text-xs font-semibold;
+}
+
+.article-card-content {
+  @apply p-5;
+}
+
+.article-card-header {
+  @apply flex items-center mb-3;
+}
+
+.article-card-category-icon {
+  @apply text-2xl mr-3;
+}
+
+.article-card-meta {
+  @apply flex-1;
+}
+
+.article-card-category {
+  @apply text-sm font-medium text-gray-500 mb-1;
+}
+
+.article-card-title {
+  @apply text-lg font-bold text-gray-900 line-clamp-2 hover:text-blue-600 transition-colors;
+}
+
+.article-card-summary {
+  @apply text-gray-600 text-sm line-clamp-3 mb-4;
+}
+
+.article-card-tags {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.article-card-tag {
+  @apply px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium hover:bg-blue-100 hover:text-blue-700 transition-colors cursor-pointer;
+}
+
+.article-card-tag.selected {
+  @apply bg-green-600 text-white;
+}
+
+.article-card-footer {
+  @apply flex items-center justify-between text-xs text-gray-500;
+}
+
+.article-card-read-time {
+  @apply flex items-center text-xs text-gray-500 mb-3;
+}
+
+.article-card-read-time-icon {
+  @apply h-3 w-3 mr-1;
+}
+
+.article-card-date {
+  @apply text-gray-400;
+} 

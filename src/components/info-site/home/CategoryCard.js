@@ -36,7 +36,7 @@ const CategoryCard = ({ categoryKey, category }) => {
             className="flex-1 text-center group"
           >
             <div className="text-5xl mb-3">{category.icon}</div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colours">
+            <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
               {category.title}
             </h3>
             <p className="text-gray-600 mb-3">
@@ -49,7 +49,7 @@ const CategoryCard = ({ categoryKey, category }) => {
           {/* Expand/Collapse Button */}
           <button
             onClick={toggleExpanded}
-            className="ml-4 p-2 rounded-full hover:bg-gray-100 transition-colours"
+            className="ml-4 p-2 rounded-full hover:bg-gray-100 transition-colors"
             aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${category.title}`}
           >
             <svg 
@@ -72,7 +72,7 @@ const CategoryCard = ({ categoryKey, category }) => {
               <Link
                 key={article.id}
                 to={`/articles/${categoryKey}/${article.id}`}
-                className="flex items-center px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colours"
+                className="flex items-center px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
               >
                 <svg className="mr-2 h-4 w-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.2 3-3.3 3-5.7 0-3.9-3.1-7-7-7z"/>

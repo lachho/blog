@@ -8,6 +8,27 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-8 px-4 mt-12">
       <div className="container mx-auto max-w-4xl">
         
+        {/* CEVSOC Affiliation Section */}
+        <div className="mb-6 text-center">
+          <h3 className="text-lg font-semibold mb-4 text-gray-400">🤝 Proudly Affiliated With</h3>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <img 
+              src="/cevsoc_logo.avif" 
+              alt="CEVSOC Logo" 
+              className="w-16 h-16 object-contain"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'inline-block';
+              }}
+            />
+            <span className="text-2xl font-bold text-green-400 hidden">CEVSOC</span>
+            <div className="text-center">
+              <div className="text-xl font-semibold text-green-400">CEVSOC</div>
+              <div className="text-sm text-gray-400">Civil & Environmental Engineering Society</div>
+            </div>
+          </div>
+        </div>
+
         {/* Disclaimer Section */}
         <div className="mb-6">
           <h3 className="text-lg font-semibold mb-3 text-center text-gray-400">⚠️ Important Disclaimer</h3>
@@ -52,9 +73,9 @@ const Footer = () => {
           </div>
           
           <div className="flex space-x-6">
-            <span className="hover:text-white transition-colours cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-white transition-colours cursor-pointer">Terms of Service</span>
-            <span className="hover:text-white transition-colours cursor-pointer">Contact</span>
+            <span className="hover:text-white transition-colors cursor-pointer">Privacy Policy</span>
+            <span className="hover:text-white transition-colors cursor-pointer">Terms of Service</span>
+            <span className="hover:text-white transition-colors cursor-pointer">Contact</span>
           </div>
         </div>
       </div>

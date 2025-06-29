@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { contentStructure } from '../../../data/contentStructure';
 import ArticleCard from '../home/ArticleCard';
 import JourneyTimeline from '../home/JourneyTimeline';
@@ -16,7 +15,7 @@ const ArticleLibraryView = ({
         <div className="flex space-x-3">
           <button
             onClick={() => setShowAllArticles(false)}
-            className={`px-4 py-2 rounded-lg font-medium transition-colours ${
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               !showAllArticles
                 ? 'bg-green-600 text-white'
                 : 'bg-white text-gray-700 hover:bg-green-50'
@@ -26,7 +25,7 @@ const ArticleLibraryView = ({
           </button>
           <button
             onClick={() => setShowAllArticles(true)}
-            className={`px-4 py-2 rounded-lg font-medium transition-colours ${
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               showAllArticles
                 ? 'bg-green-600 text-white'
                 : 'bg-white text-gray-700 hover:bg-green-50'

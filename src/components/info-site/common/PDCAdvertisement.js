@@ -6,7 +6,7 @@ const PDCAdvertisement = () => {
     
     <div className="bg-gradient-to-r  py-12 px-4 mx-4 rounded-2xl shadow-2xl mb-8 bg-cover bg-center bg-no-repeat"
     style={{
-      backgroundImage: `linear-gradient(rgba(20, 184, 166, 0.6), rgba(34, 197, 94, 0.6), rgba(163, 230, 53, 0.6)), url('/hero.png')`
+      backgroundImage: `linear-gradient(rgba(17, 138, 124, 0.6), rgba(24, 139, 66, 0.6), rgba(114, 160, 39, 0.6)), url('/hero.png')`
     }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center text-white">

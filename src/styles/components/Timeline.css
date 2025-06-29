@@ -1,0 +1,182 @@
+/* Journey Timeline Component Styles */
+
+.timeline-container {
+  @apply py-8 bg-white;
+}
+
+.timeline-content {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+@media (min-width: 640px) {
+  .timeline-content {
+    @apply px-6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline-content {
+    @apply px-8;
+  }
+}
+
+.timeline-header {
+  @apply text-center mb-6;
+}
+
+.timeline-title {
+  @apply text-2xl font-bold text-gray-800 mb-3;
+}
+
+@media (min-width: 768px) {
+  .timeline-title {
+    @apply text-3xl;
+  }
+}
+
+.timeline-description {
+  @apply text-gray-600 max-w-2xl mx-auto;
+}
+
+.timeline-wrapper {
+  @apply relative;
+}
+
+.timeline-line {
+  @apply absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-200 h-full hidden;
+}
+
+@media (min-width: 768px) {
+  .timeline-line {
+    @apply block;
+  }
+}
+
+.timeline-steps {
+  @apply relative;
+}
+
+.timeline-step {
+  @apply relative mb-4;
+}
+
+.timeline-step:not(:first-child) {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .timeline-step:not(:first-child) {
+    margin-top: -60px;
+  }
+}
+
+.timeline-dot {
+  @apply absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-white rounded-full border-4 border-gray-200 flex items-center justify-center z-20 hidden;
+  top: 5px;
+}
+
+@media (min-width: 768px) {
+  .timeline-dot {
+    @apply flex;
+  }
+}
+
+.timeline-dot-inner {
+  @apply w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm;
+}
+
+.timeline-card-container {
+  @apply flex items-start;
+}
+
+.timeline-card-container.even {
+  @apply md:flex-row;
+}
+
+.timeline-card-container.odd {
+  @apply md:flex-row-reverse;
+}
+
+.timeline-card-content {
+  @apply flex-1;
+}
+
+@media (min-width: 768px) {
+  .timeline-card-content {
+    @apply w-1/2;
+  }
+}
+
+.timeline-card {
+  @apply bg-white rounded-lg shadow-lg p-4 border-l-4 transform hover:scale-105 transition-all duration-300 relative z-10;
+}
+
+@media (min-width: 768px) {
+  .timeline-card {
+    @apply p-5;
+  }
+}
+
+.timeline-card.even {
+  @apply md:mr-6;
+}
+
+.timeline-card.odd {
+  @apply md:ml-6;
+}
+
+.timeline-card-header {
+  @apply flex items-center mb-3;
+}
+
+.timeline-card-icon {
+  @apply text-2xl mr-3 p-2 rounded-full bg-opacity-10;
+}
+
+.timeline-card-meta {
+  @apply text-xs font-semibold text-gray-500 mb-1;
+}
+
+.timeline-card-title {
+  @apply text-lg font-bold text-gray-800;
+}
+
+@media (min-width: 768px) {
+  .timeline-card-title {
+    @apply text-xl;
+  }
+}
+
+.timeline-card-description {
+  @apply text-gray-600 mb-4 text-sm leading-relaxed;
+}
+
+.timeline-card-footer {
+  @apply flex items-center justify-between;
+}
+
+.timeline-card-badge {
+  @apply text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full;
+}
+
+.timeline-card-button {
+  @apply inline-flex items-center px-4 py-2 text-white font-medium text-sm rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300;
+}
+
+.timeline-spacer {
+  @apply hidden;
+}
+
+@media (min-width: 768px) {
+  .timeline-spacer {
+    @apply block w-1/2;
+  }
+}
+
+.timeline-view-all {
+  @apply text-center mt-6;
+}
+
+.timeline-view-all-button {
+  @apply inline-flex items-center px-6 py-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white font-bold rounded-lg hover:from-gray-800 hover:to-gray-900 transform hover:scale-105 transition-all duration-300 shadow-lg;
+} 

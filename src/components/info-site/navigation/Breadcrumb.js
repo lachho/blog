@@ -32,7 +32,7 @@ const Breadcrumb = ({ breadcrumbs }) => {
             ) : (
               <Link
                 to={crumb.path}
-                className="text-sm font-medium text-green-600 hover:text-green-800 transition-colours truncate max-w-xs"
+                className="text-sm font-medium text-green-600 hover:text-green-800 transition-colors truncate max-w-xs"
               >
                 {crumb.title}
               </Link>

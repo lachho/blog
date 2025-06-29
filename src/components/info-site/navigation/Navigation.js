@@ -1,16 +1,14 @@
 // src/components/info-site/Navigation.js (Enhanced)
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { contentStructure } from '../../../data/contentStructure';
 import { SearchForm } from '../common';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
   const location = useLocation();
-  const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
   // Safely get pathname
@@ -34,15 +32,6 @@ const Navigation = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (searchTerm.trim()) {
-      navigate(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
-      setSearchTerm('');
-      setIsMenuOpen(false);
-    }
-  };
 
   const toggleMobileMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -68,7 +57,7 @@ const Navigation = () => {
           {/* Logo/Brand */}
           <Link 
             to="/" 
-            className="text-xl font-bold text-green-600 hover:text-green-800 transition-colours"
+            className="text-xl font-bold text-green-600 hover:text-green-800 transition-colors"
           >
             <img 
               src="/logo-black.png" 
@@ -89,7 +78,7 @@ const Navigation = () => {
                   >
                     <Link
                       to={item.path}
-                      className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colours ${
+                      className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                         isActivePath(item.path) || location.pathname.startsWith('/articles')
                           ? 'text-green-600 bg-green-50'
                           : 'text-gray-700 hover:text-green-600 hover:bg-white'
@@ -108,7 +97,7 @@ const Navigation = () => {
                             <Link
                               key={categoryKey}
                               to={`/articles/${categoryKey}`}
-                              className="flex items-center px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colours"
+                              className="flex items-center px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
                             >
                               <span className="mr-2">{category.icon}</span>
                               {category.title}
@@ -121,7 +110,7 @@ const Navigation = () => {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colours ${
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActivePath(item.path)
                         ? 'text-green-600 bg-green-50'
                         : 'text-gray-700 hover:text-green-600 hover:bg-white'
@@ -172,7 +161,7 @@ const Navigation = () => {
                   <>
                     <Link
                       to={item.path}
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colours ${
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                         isActivePath(item.path) || location.pathname.startsWith('/articles')
                           ? 'text-green-600 bg-green-50'
                           : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
@@ -187,7 +176,7 @@ const Navigation = () => {
                         <Link
                           key={key}
                           to={`/articles/${key}`}
-                          className={`flex items-center px-5 py-2 rounded-md text-base font-medium transition-colours ${
+                          className={`flex items-center px-5 py-2 rounded-md text-base font-medium transition-colors ${
                             location.pathname.startsWith(`/articles/${key}`)
                               ? 'text-green-600 bg-green-50'
                               : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
@@ -202,7 +191,7 @@ const Navigation = () => {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colours ${
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       isActivePath(item.path)
                         ? 'text-green-600 bg-green-50'
                         : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'

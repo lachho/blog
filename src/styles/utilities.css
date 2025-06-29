@@ -1,0 +1,53 @@
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Search highlighting */
+mark {
+  @apply bg-yellow-200 px-1 rounded;
+}
+
+/* Search result highlighting improvements */
+.search-highlight {
+  background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+  padding: 0 2px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+/* Focus improvements for accessibility */
+.focus-ring:focus {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive pagination styles */
+.pagination-container {
+  @apply flex flex-wrap justify-center items-center gap-2;
+}
+
+@media (max-width: 640px) {
+  .pagination-container {
+    @apply gap-1;
+  }
+  
+  .pagination-container button {
+    @apply px-2 py-1 text-sm;
+  }
+} 

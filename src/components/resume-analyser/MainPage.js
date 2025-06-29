@@ -5,13 +5,9 @@ import Footer from '../info-site/Footer';
 import ExportButtons from './ExportButtons';
 import UnderConstruction from './UnderConstruction';
 import PDCAdvertisement from '../info-site/common/PDCAdvertisement';
-import { parseFile } from '../../utils/fileParser';
-import { analyseResume } from '../../utils/resumeAnalyser';
 
 const MainPage = () => {
   const [analysisResults, setAnalysisResults] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
   const [showModal, setShowModal] = useState(false);
 
   const handleInteraction = (e) => {
@@ -28,15 +24,14 @@ const MainPage = () => {
     <div className="bg-gray-50 min-h-screen font-sans flex flex-col relative">
       {/* Interactive Overlay */}
       <div 
-        className="absolute inset-0 z-40 cursor-pointer"
+        className="absolute inset-0 z-40 cursor-pointer pointer-events-auto"
         onClick={handleInteraction}
-        style={{ pointerEvents: 'auto' }}
       />
       
       {/* Under Construction Modal */}
       <UnderConstruction isOpen={showModal} onClose={() => setShowModal(false)} />
       
-      <div className="container mx-auto px-4 py-8 md:py-12 flex-grow relative z-30" style={{ pointerEvents: 'none' }}>
+      <div className="container mx-auto px-4 py-8 md:py-12 flex-grow relative z-30 pointer-events-none">
         
         <header className="text-center mb-8 md:mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800">
@@ -71,19 +66,9 @@ const MainPage = () => {
         </header>
 
         <main>
-          {!analysisResults && !isLoading && (
-            <FileUpload onFileSelect={handleFileSelect} disabled={isLoading} />
+          {!analysisResults && (
+            <FileUpload onFileSelect={handleFileSelect} disabled={false} />
           )}
-
-          {isLoading && (
-            <div className="text-center p-8">
-              <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-blue-600 mx-auto"></div>
-              <p className="mt-4 text-lg font-semibold text-gray-700">Analysing your resume...</p>
-              <p className="text-gray-500">This might take a moment.</p>
-            </div>
-          )}
-
-          {error && <p className="text-center text-red-500 bg-red-100 p-4 rounded-lg">{error}</p>}
 
           {analysisResults && (
             <div>
@@ -109,11 +94,11 @@ const MainPage = () => {
       </div>
       
       {/* PDC Advertisement */}
-      <div style={{ pointerEvents: 'none' }}>
+      <div className="pointer-events-none">
         <PDCAdvertisement />
       </div>
       
-      <div style={{ pointerEvents: 'none' }}>
+      <div className="pointer-events-none">
         <Footer />
       </div>
     </div>

@@ -1,0 +1,75 @@
+/* Featured Section Component Styles */
+
+.featured-section {
+  @apply py-16 bg-white;
+}
+
+.featured-container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+@media (min-width: 640px) {
+  .featured-container {
+    @apply px-6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .featured-container {
+    @apply px-8;
+  }
+}
+
+.featured-header {
+  @apply text-center mb-12;
+}
+
+.featured-header-icon-container {
+  @apply flex items-center justify-center mb-4;
+}
+
+.featured-header-icon {
+  @apply h-6 w-6 text-yellow-500 mr-2;
+}
+
+.featured-title {
+  @apply text-3xl font-bold text-gray-800;
+}
+
+@media (min-width: 768px) {
+  .featured-title {
+    @apply text-4xl;
+  }
+}
+
+.featured-description {
+  @apply text-lg text-gray-600 max-w-2xl mx-auto;
+}
+
+.featured-grid {
+  @apply grid grid-cols-1 gap-8 mb-12;
+}
+
+@media (min-width: 768px) {
+  .featured-grid {
+    @apply grid-cols-2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .featured-grid {
+    @apply grid-cols-3;
+  }
+}
+
+.featured-view-all {
+  @apply text-center;
+}
+
+.featured-view-all-button {
+  @apply inline-flex items-center px-8 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors shadow-lg;
+}
+
+.featured-view-all-icon {
+  @apply ml-2 h-5 w-5;
+} 

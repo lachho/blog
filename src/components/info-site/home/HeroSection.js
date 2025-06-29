@@ -6,7 +6,9 @@ const HeroSection = ({ onExploreClick }) => {
     // <section className="h-screen bg-gradient-to-br from-green-400 via-green-500 to-yellow-600 text-white flex items-center justify-center w-full pb-20 sm:pb-32">
     <section 
       className="h-screen bg-cover bg-[center_15%] text-white flex items-center justify-center w-full pb-16 sm:pb-24"
-      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/hero-green.png)` }}
+      style={{
+        backgroundImage: `linear-gradient(rgba(20, 184, 166, 0.2), rgba(34, 197, 94, 0.2), rgba(163, 230, 53, 0.2)), url('/hero-green.png')`
+      }}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-5xl md:text-7xl font-extrabold mb-5 text-white">
@@ -36,7 +38,7 @@ const HeroSection = ({ onExploreClick }) => {
           </Link>
           <Link
             to="/pdc"
-            className="px-8 py-3 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg inline-block"
+            className="px-8 py-3 bg-white text-green-600 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg"
           >
             Buy My PDC Ticket
           </Link>

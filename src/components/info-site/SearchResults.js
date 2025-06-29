@@ -25,7 +25,7 @@ const SearchResultCard = ({ article, query, highlightText }) => (
     <h2 className="text-xl font-bold text-gray-900 mb-2">
       <Link 
         to={article.path}
-        className="hover:text-green-600 transition-colours"
+        className="hover:text-green-600 transition-colors"
       >
         {highlightText(article.title, query)}
       </Link>
@@ -35,7 +35,7 @@ const SearchResultCard = ({ article, query, highlightText }) => (
     </p>
     <Link
       to={article.path}
-      className="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition-colours"
+      className="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition-colors"
     >
       Read Article
       <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ const NoResultsView = ({ query, suggestedSearches, onSuggestionClick }) => (
           <button
             key={suggestion}
             onClick={() => onSuggestionClick(suggestion)}
-            className="px-4 py-2 bg-green-100 text-green-700 rounded-full hover:bg-green-200 transition-colours"
+            className="px-4 py-2 bg-green-100 text-green-700 rounded-full hover:bg-green-200 transition-colors"
           >
             {suggestion}
           </button>
@@ -68,7 +68,7 @@ const NoResultsView = ({ query, suggestedSearches, onSuggestionClick }) => (
     </div>
     <Link
       to="/articles"
-      className="inline-block mt-5 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colours"
+      className="inline-block mt-5 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
     >
       Browse All Articles
     </Link>
@@ -89,7 +89,7 @@ const DefaultSearchView = ({ suggestedSearches, onSuggestionClick }) => (
           <button
             key={suggestion}
             onClick={() => onSuggestionClick(suggestion)}
-            className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-green-100 hover:text-green-700 transition-colours"
+            className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-green-100 hover:text-green-700 transition-colors"
           >
             {suggestion}
           </button>
@@ -98,7 +98,7 @@ const DefaultSearchView = ({ suggestedSearches, onSuggestionClick }) => (
     </div>
     <Link
       to="/articles"
-      className="inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colours"
+      className="inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
     >
       Browse All Content
     </Link>

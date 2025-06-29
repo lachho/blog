@@ -12,6 +12,17 @@ import SearchResults from './components/info-site/SearchResults';
 import AboutPage from './components/info-site/AboutPage';
 import PDCPage from './components/info-site/PDCPage';
 
+// Scroll restoration component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function Layout() {
   const location = useLocation();
   
@@ -24,6 +35,7 @@ function Layout() {
   
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
       <Navigation />
       {shouldShowSidebar && <SidebarNavigation />}
       

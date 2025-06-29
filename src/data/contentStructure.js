@@ -68,7 +68,19 @@ export const contentStructure = {
 // Add/remove articles here to control which ones appear in the featured section
 export const featuredArticles = [
   { categoryKey: 'setting-up-for-success', articleId: 'general-advice' },
-  { categoryKey: 'resume-and-cover-letter', articleId: 'resume-masterclass-content' },
+  { 
+    categoryKey: 'special', 
+    articleId: 'pdc',
+    isSpecial: true,
+    title: 'Professional Development Camp 2025',
+    summary: 'Join us for an intensive weekend workshop designed to supercharge your career with hands-on learning, networking, and industry insights.',
+    category: 'special',
+    categoryTitle: 'Events',
+    path: '/pdc',
+    tags: ['events', 'networking', 'professional-development', 'cevsoc'],
+    image: '/cevsoc_logo.avif',
+    readTime: '5 min read'
+  },
   { categoryKey: 'job-application-process', articleId: 'helpful-resources-and-links' },
 ];
 
@@ -196,6 +208,23 @@ export const getFeaturedArticles = async () => {
   
   for (const featured of featuredArticles) {
     try {
+      // Handle special articles (like PDC) differently
+      if (featured.isSpecial) {
+        articles.push({
+          id: featured.articleId,
+          title: featured.title,
+          summary: featured.summary,
+          category: featured.category,
+          categoryTitle: featured.categoryTitle,
+          path: featured.path,
+          tags: featured.tags || [],
+          image: featured.image,
+          readTime: featured.readTime,
+          isSpecial: true
+        });
+        continue;
+      }
+
       const { categoryKey, articleId } = featured;
       const category = contentStructure[categoryKey];
       

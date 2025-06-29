@@ -25,7 +25,7 @@ class ErrorBoundary extends React.Component {
               <p className="text-gray-700 mb-6">We encountered an unexpected error while loading this page.</p>
               <Link 
                 to="/articles" 
-                className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colours"
+                className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Back to Article Library
               </Link>

@@ -35,14 +35,6 @@ const PDCPage = () => {
           }}
         >
           <div className="max-w-6xl mx-auto text-center text-white relative z-10">
-            {/* <div className="bg-white rounded-full p-8 shadow-2xl inline-block mb-8">
-              <div className="text-6xl font-bold text-green-800">
-                PDC
-              </div>
-              <div className="text-lg text-gray-600 font-medium mt-2">
-                Professional<br />Development<br />Camp
-              </div>
-            </div> */}
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               CEVSOC Presents:
             </h2>
@@ -193,7 +185,16 @@ const PDCPage = () => {
               </p>
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">CEVSOC</div>
+                  <img 
+                    src="/cevsoc_logo.avif" 
+                    alt="CEVSOC Logo" 
+                    className="w-24 h-24 mx-auto mb-3 object-contain"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'block';
+                    }}
+                  />
+                  <div className="text-3xl font-bold text-green-600 mb-2 hidden">CEVSOC</div>
                   <p className="text-sm text-gray-600">Your Engineering Community</p>
                 </div>
                 <div className="text-4xl text-gray-400">×</div>

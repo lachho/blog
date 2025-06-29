@@ -56,7 +56,7 @@ const SocialLinks = ({
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`flex items-center ${buttonClasses[size]} ${link.bgColor} text-white rounded-lg transition-colours shadow-md`}
+          className={`flex items-center ${buttonClasses[size]} ${link.bgColor} text-white rounded-lg transition-colors shadow-md`}
         >
           <svg className={sizeClasses[size]} fill={link.isStroke ? "none" : "currentColor"} stroke={link.isStroke ? "currentColor" : "none"} viewBox="0 0 24 24">
             {link.icon}

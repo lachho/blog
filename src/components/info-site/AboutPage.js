@@ -39,8 +39,7 @@ const AboutPage = () => {
               <img
                 src="/mugshot_23.jpg"
                 alt="Lachlan Ho"
-                className="w-full h-full object-cover"
-                style={{ transform: 'scale(1.5)  translate(0%, 12%)' , transformOrigin: 'centre centre' }}
+                className="w-full h-full object-cover scale-150 translate-x-0 translate-y-[12%] origin-center"
               />
             </div>
             
@@ -161,7 +160,7 @@ const AboutPage = () => {
             </p>
             <Link 
               to="/resume-analyser" 
-              className="inline-block mt-3 text-green-600 font-semibold hover:text-green-800 transition-colours"
+              className="inline-block mt-3 text-green-600 font-semibold hover:text-green-800 transition-colors"
             >
               Try Resume Analyser →
             </Link>
@@ -182,7 +181,7 @@ const AboutPage = () => {
             </p>
             <Link 
               to="/articles" 
-              className="inline-block mt-3 text-yellow-600 font-semibold hover:text-yellow-800 transition-colours"
+              className="inline-block mt-3 text-yellow-600 font-semibold hover:text-yellow-800 transition-colors"
             >
               Explore Content →
             </Link>
@@ -222,13 +221,13 @@ const AboutPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/resume-analyser"
-              className="px-7 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colours shadow-lg"
+              className="px-7 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors shadow-lg"
             >
               Analyse Your Resume
             </Link>
             <Link
               to="/articles"
-              className="px-7 py-3 border-2 border-green-600 text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colours"
+              className="px-7 py-3 border-2 border-green-600 text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors"
             >
               Explore Content
             </Link>
