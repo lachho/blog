@@ -1,6 +1,6 @@
 ---
-title: "Resume Masterclass - Content"
-summary: "What to write in your resume to catch a recruiter's eye."
+title: "Resume Masterclass - Content that wins Interviews"
+summary: "What catches the recruiters eye - and how to write it."
 tags: ["resume", "masterclass", "content"]
 ---
 Here I will detail what makes a good resume standard from the rest of the poule. If you haven’t made a resume yet, I recommend checking the resume crash course first. 

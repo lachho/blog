@@ -1,6 +1,6 @@
 ---
-title: "Helpful Resources and Links"
-summary: "A curated list of resources to aid your job search."
+title: "Essential Resources for Undergraduate Job Seekers"
+summary: "A curated list of resources to supercharge your job search."
 tags: ["resources", "links", "job search"]
 ---
 ## Finding Jobs

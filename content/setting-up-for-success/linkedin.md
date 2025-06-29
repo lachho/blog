@@ -1,6 +1,6 @@
 ---
-title: "LinkedIn"
-summary: "Optimise your LinkedIn profile for professional success."
+title: "Unlocking LinkedIn to its full Potential"
+summary: "Optimise your LinkedIn and get noticed by professionals."
 tags: ["linkedin", "networking", "social media"]
 ---
 In my opinion LinkedIn is overrated. This should be one of your last priorities, as everything else is way more important (resume, cover letter, interview skills, actual experience). If you are in a time crunch, leave this for last. 

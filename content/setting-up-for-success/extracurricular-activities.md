@@ -1,6 +1,6 @@
 ---
-title: "Extracurricular Activities"
-summary: "The importance of extracurriculars and how they boost your profile."
+title: "Extracurriculars: A (not-so) Secret Weapon"
+summary: "How everything you do supercharges your profile and net-value."
 tags: ["extracurriculars", "student life", "resume"]
 ---
 Extracurriculars are an excellent way to spend your time, and have its place on your resume. 

@@ -1,6 +1,6 @@
 ---
-title: "Job Application Process"
-summary: "An overview of the entire job application journey."
+title: "Your Roadmap to Day 1: THe Job Application Process"
+summary: "Understand every step of the entire job application journey, from search to signed offer."
 tags: ["job application", "career", "process"]
 ---
 Job applications for grad and intern can be a long process. 

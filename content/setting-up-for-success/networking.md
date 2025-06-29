@@ -1,6 +1,6 @@
 ---
-title: "Networking"
-summary: "How to make the most of networking events."
+title: "Networking Like a Pro"
+summary: "Shy? Awkward? Turn your biggest fears into into career-changing opportunities."
 tags: ["networking", "career", "connections"]
 ---
 Networking is not some scary professional thing. Networking is the biz jargon for just making friends. The best way to  “network” with someone is to ask questions and chat as if you were trying to be their friend. 

@@ -1,6 +1,6 @@
 ---
-title: "Resume Masterclass - Formatting"
-summary: "Best practices to format your resume."
+title: "Resume Masterclass - Formatting Essentials"
+summary: "Essential formatting hacks to make your resume pop and pass the recruiter and algorithmic scans."
 tags: ["resume", "masterclass", "formatting"]
 ---
 ## Applicant Tracking Systems

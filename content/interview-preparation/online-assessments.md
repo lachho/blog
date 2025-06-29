@@ -1,6 +1,6 @@
 ---
-title: "Online Assessments"
-summary: "Ace various types of online assessments."
+title: "Crack the Code to Online Assessments"
+summary: "Tips and tricks to master every type of online test."
 tags: ["interview", "assessment", "testing"]
 ---
 There are three types of online assessments.
