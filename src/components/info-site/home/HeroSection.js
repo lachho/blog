@@ -29,7 +29,7 @@ const HeroSection = ({ onExploreClick }) => {
           Career Compass
         </h1>
         <h2 className="text-2xl md:text-4xl font-bold mb-5 text-white">
-          The Undergraduate's Guide to the Career Success
+          The Undergraduate's Guide to Career Success
         </h2>
         <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
           Practical advice, industry secrets, and free resources for internships and grad roles.
