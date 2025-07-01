@@ -26,7 +26,7 @@ const AnalysisDashboard = ({ results }) => {
   const { overall, ats, content, sections } = results;
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 px-4 md:px-16">
       <h2 className="text-3xl font-bold text-center text-gray-800">Your Analysis is Ready</h2>
       
       {/* Overall Score Section */}

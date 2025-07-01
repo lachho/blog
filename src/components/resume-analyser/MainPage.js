@@ -5,10 +5,14 @@ import Footer from '../info-site/Footer';
 import ExportButtons from './ExportButtons';
 import UnderConstruction from './UnderConstruction';
 import PDCAdvertisement from '../info-site/common/PDCAdvertisement';
+import { parseFile } from '../../utils/fileParser';
+import { analyseResume } from '../../utils/resumeAnalyser';
 
-const MainPage = () => {
+const MainPage = ({ bypassUnderConstruction = false }) => {
   const [analysisResults, setAnalysisResults] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleInteraction = (e) => {
     e.preventDefault();
@@ -17,21 +21,36 @@ const MainPage = () => {
   };
 
   const handleFileSelect = async (files) => {
-    handleInteraction({ preventDefault: () => {}, stopPropagation: () => {} });
+    setError(null);
+    setLoading(true);
+    setAnalysisResults(null);
+    try {
+      const parsingResult = await parseFile(files[0]);
+      const results = await analyseResume(parsingResult);
+      setAnalysisResults(results);
+    } catch (err) {
+      setError(typeof err === 'string' ? err : 'Failed to analyse resume.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="bg-gray-50 min-h-screen font-sans flex flex-col relative">
       {/* Interactive Overlay */}
-      <div 
-        className="absolute inset-0 z-40 cursor-pointer pointer-events-auto"
-        onClick={handleInteraction}
-      />
+      {!bypassUnderConstruction && (
+        <div 
+          className="absolute inset-0 z-40 cursor-pointer pointer-events-auto"
+          onClick={handleInteraction}
+        />
+      )}
       
       {/* Under Construction Modal */}
-      <UnderConstruction isOpen={showModal} onClose={() => setShowModal(false)} />
+      {!bypassUnderConstruction && (
+        <UnderConstruction isOpen={showModal} onClose={() => setShowModal(false)} />
+      )}
       
-      <div className="container mx-auto px-4 py-8 md:py-12 flex-grow relative z-30 pointer-events-none">
+      <div className="container mx-auto px-4 py-8 md:py-12 flex-grow relative z-30">
         
         <header className="text-center mb-8 md:mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800">
@@ -66,8 +85,17 @@ const MainPage = () => {
         </header>
 
         <main>
-          {!analysisResults && (
-            <FileUpload onFileSelect={handleFileSelect} disabled={false} />
+          {error && (
+            <div className="text-red-600 text-center mb-4 font-semibold">{error}</div>
+          )}
+          {loading && (
+            <div className="text-center text-lg text-gray-700 my-8">
+              <p className="mt-4 text-lg font-semibold text-gray-700">Analysing your resume...</p>
+              <p className="text-gray-500">This might take a moment.</p>
+            </div>
+          )}
+          {!analysisResults && !loading && (
+            <FileUpload onFileSelect={handleFileSelect} />
           )}
 
           {analysisResults && (
@@ -80,6 +108,7 @@ const MainPage = () => {
               <div className="text-center mt-8">
                   <button 
                     onClick={() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
                       setAnalysisResults(null);
                     }}
                     className="px-8 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors"

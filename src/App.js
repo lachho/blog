@@ -69,6 +69,10 @@ const router = createBrowserRouter([
         element: <MainPage />
       },
       {
+        path: "resume-analyser/unlocked",
+        element: <MainPage bypassUnderConstruction />
+      },
+      {
         path: "job-description",
         element: <JobDescription />
       },
