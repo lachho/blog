@@ -5,11 +5,14 @@
 }
 
 .article-card-image {
-  @apply w-full h-48 object-cover;
+  @apply w-full object-cover aspect-[2/1];
+  height: auto;
+  min-height: 0;
+  max-height: none;
 }
 
 .article-card-featured-badge {
-  @apply absolute top-2 right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full flex items-center space-x-1 shadow-lg;
+  @apply absolute top-1 right-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-0.5 rounded-full flex items-center space-x-1 shadow-lg;
 }
 
 .article-card-featured-icon {
@@ -21,15 +24,15 @@
 }
 
 .article-card-content {
-  @apply p-5;
+  @apply p-3;
 }
 
 .article-card-header {
-  @apply flex items-center mb-3;
+  @apply flex items-center mb-2;
 }
 
 .article-card-category-icon {
-  @apply text-2xl mr-3;
+  @apply text-lg mr-3;
 }
 
 .article-card-meta {
@@ -37,7 +40,7 @@
 }
 
 .article-card-category {
-  @apply text-sm font-medium text-gray-500 mb-1;
+  @apply text-xs text-gray-500 mb-1;
 }
 
 .article-card-title {
@@ -49,11 +52,11 @@
 }
 
 .article-card-tags {
-  @apply flex flex-wrap gap-2 mb-4;
+  @apply flex flex-wrap gap-1 mb-2;
 }
 
 .article-card-tag {
-  @apply px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium hover:bg-blue-100 hover:text-blue-700 transition-colors cursor-pointer;
+  @apply px-1.5 py-0.5 bg-gray-100 text-gray-600 rounded-full text-xs  hover:bg-blue-100 hover:text-blue-700 transition-colors cursor-pointer;
 }
 
 .article-card-tag.selected {
@@ -65,7 +68,7 @@
 }
 
 .article-card-read-time {
-  @apply flex items-center text-xs text-gray-500 mb-3;
+  @apply flex items-center text-xs text-gray-500 mb-2;
 }
 
 .article-card-read-time-icon {

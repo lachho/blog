@@ -23,7 +23,7 @@ const ArticleCard = ({
   return (
     <div className="article-card">
       {/* Article Image */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative aspect-[2/1] overflow-hidden">
         <img
           src={imageUrl}
           alt={article.title}

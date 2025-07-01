@@ -48,7 +48,7 @@ const UnderConstruction = ({ isOpen, onClose }) => {
               <div className="flex items-center">
                 <span className="text-green-500 mr-2">📅</span>
                 <span className="font-medium">When:</span>
-                <span className="ml-1">Thursday 3rd July (Week 5)</span>
+                <span className="ml-1">12-2pm Thursday 3rd July (Week 5)</span>
               </div>
               <div className="flex items-center">
                 <span className="text-blue-500 mr-2">🎯</span>

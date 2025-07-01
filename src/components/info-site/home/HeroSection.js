@@ -29,26 +29,31 @@ const HeroSection = ({ onExploreClick }) => {
           Career Compass
         </h1>
         <h2 className="text-2xl md:text-4xl font-bold mb-5 text-white">
-          The Undergraduate's Guide to Career Success
+          Your one stop shop for everything you need to know to get your dream role.
         </h2>
         <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
           Practical advice, industry secrets, and free resources for internships and grad roles.
-          Helping you find your path and land your dream role.
         </p>
         
         {/* Call-to-Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-5 justify-center">
-          <button
+          {/* <button
             onClick={onExploreClick}
             className="px-8 py-3 bg-white text-green-600 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg"
           >
-            Explore Articles Now
-          </button>
+            Need Help? Click Here
+          </button> */}
+          <Link
+            to="/articles"
+            className="px-8 py-3 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg inline-block"
+          >
+            Need Help? Click Here
+          </Link>
           <Link
             to="/resume-analyser"
             className="px-8 py-3 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg inline-block"
           >
-            Analyse My Resume
+            Fix My Resume!
           </Link>
           <Link
             to="/pdc"

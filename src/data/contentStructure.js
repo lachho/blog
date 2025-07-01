@@ -43,12 +43,14 @@ export const contentStructure = {
   },
   'interview-preparation': {
     title: 'Interview Proficiency',
-    description: 'Learn insider tips and proven strategies to ace every interview.',
+    description: 'Learn insider tips and proven strategies to ace every interview and assessment.',
     icon: '🎙️',
     articles: [
-      { id: 'online-assessments' },
+      { id: 'interview-masterclass-preparation' },
+      { id: 'interview-masterclass-answers' },
+      { id: 'interview-masterclass-vibe' },
       { id: 'group-assessments' },
-      { id: 'interviews' },
+      { id: 'online-assessments' },
     ]
   },
   'career-guidance': {

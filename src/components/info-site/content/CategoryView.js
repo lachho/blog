@@ -10,7 +10,7 @@ const CategoryView = ({ category, categoryKey, articleMetadata }) => {
         <p className="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">{category.description}</p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {(Array.isArray(category.articles) && category.articles.length > 0) ? (
           category.articles.map((article) => {
             const metadata = articleMetadata[`${categoryKey}-${article.id}`];

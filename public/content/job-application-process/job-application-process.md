@@ -1,5 +1,5 @@
 ---
-title: "Your Roadmap to Day 1: THe Job Application Process"
+title: "Roadmap of the Job Application Process"
 summary: "Understand every step of the entire job application journey, from search to signed offer."
 tags: ["job application", "career", "process"]
 ---

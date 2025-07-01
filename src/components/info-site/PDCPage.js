@@ -47,10 +47,10 @@ const PDCPage = () => {
         >
           <div className="max-w-6xl mx-auto text-center text-white relative z-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              3 Days of Upskilling & Fun! 🚀
+              The camp that every 2nd, 3rd, and 4th year is talking about  🚀
             </h2>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              Join us for an intensive weekend workshop designed to supercharge your career with hands-on learning, networking, and industry insights.
+            Turbocharge your skills, transform your resume and max out your aura, all-whilst having the time of your life.
             </p>
             
             <div className="bg-white bg-opacity-20 rounded-lg p-6 inline-block backdrop-blur-sm">
@@ -84,15 +84,15 @@ const PDCPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
                 <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Personalised insights</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Personalised Insights</h3>
                 <p className="text-gray-600">
-                  Personalised insights on how to leverage on your own experiences, strengths and skills to get your foot into the door of the industry
+                Discover the must-know hacks to leverage on your own experiences, strengths and skills to get your foot into the door of the industry
                 </p>
               </div>
               
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
                 <div className="text-4xl mb-4">📋</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Individualised feedback</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Individualised Feedback</h3>
                 <p className="text-gray-600">
                   Individualised feedback and actionables on your mock interviews, soft skills, resumes and cover letters from industry mentors and peers
                 </p>
@@ -100,17 +100,17 @@ const PDCPage = () => {
               
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
                 <div className="text-4xl mb-4">🗣️</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Reflections from early grads</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Real Talk from Early Grads</h3>
                 <p className="text-gray-600">
-                  Reflections from early career professionals to gain insights into different career paths and advice in beginning your professional journey. 
+                  Reflections from our early career professionals, as they share unfiltered stories and spicy tips you can integrate into your own journey.
                 </p>
               </div>
               
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
-                <div className="text-4xl mb-4">📂</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Develop your Experience Portfolio</h3>
+                <div className="text-4xl mb-4">💪</div>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Max out your Skills and Confidence</h3>
                 <p className="text-gray-600">
-                  A customised portfolio of experiences and achievements from the camp to showcase your initiative, teamwork, and leadership skills to potential employers.
+                  Get your hands dirty with high-energy activities with your peers that will boost your abilities, confidence and readiness for the professional world.
                 </p>
               </div>
               
@@ -118,15 +118,15 @@ const PDCPage = () => {
                 <div className="text-4xl mb-4">📸</div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Life-long Memories</h3>
                 <p className="text-gray-600">
-                  Photos, memories, and life-long friendships to remind you of this standout moment of your uni journey! 
+                Let loose with your friends with fun games, wild parties and surprises you’ll never forget.
                 </p>
               </div>
               
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
-                <div className="text-4xl mb-4">🥳</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Fun Games and Parties</h3>
+                <div className="text-4xl mb-4">🚅</div>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Bullet-proof Your Network</h3>
                 <p className="text-gray-600">
-                  Two nights of action packed parties, drinks and fun.                 
+                  Walk away with exclusive resources from 20+ different industry leaders across every discipline. 
                 </p>
               </div>
             </div>
@@ -176,18 +176,14 @@ const PDCPage = () => {
         }}>
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-4xl font-bold mb-8">
-              Ready to Accelerate Your Career? 🚀
+              Ready to get Employed? 🚀
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join hundreds of students and graduates who have already transformed their career prospects through PDC.
+              Join hundreds of students who have already transformed their career prospects.
             </p>
             
             <div className="bg-white bg-opacity-20 rounded-lg p-8 mb-8">
-              <h3 className="text-2xl font-bold mb-4">Tickets Are Now Open!</h3>
-              <p className="text-lg mb-6">
-                Early Bird tickets are selling out fast!
-              </p>
-              
+              <h3 className="text-2xl font-bold mb-4">Tickets Are Now Selling Out Fast!</h3>              
               <div className="space-y-4">
                 <button 
                   onClick={handleTicketPurchase}

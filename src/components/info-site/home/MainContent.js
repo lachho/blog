@@ -42,7 +42,7 @@ const MainContent = () => {
           </div>
 
           {/* View All Button */}
-          <div className="featured-view-all">
+          <div className="featured-view-all mt-4">
             <Link
               to="/articles"
               className="featured-view-all-button"

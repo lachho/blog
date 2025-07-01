@@ -14,7 +14,7 @@ const PDCAdvertisement = () => {
             Found this useful? ✨
           </h2>
           <h3 className="text-2xl md:text-3xl font-semibold mb-6">
-            Come to CEVSOC's Professional Development Camp for 3 days of upskilling and fun! 🚀
+           CEVSOC's Professional Development Camp will equip you with EVERYTHING you need to know to land your dream role 🚀
           </h3>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
@@ -40,11 +40,11 @@ const PDCAdvertisement = () => {
               <div className="bg-white bg-opacity-20 rounded-lg p-4 mb-4" style={{ minHeight: '200px' }}>
                 <h4 className="text-lg font-semibold mb-2">🗓️ What to Expect:</h4>
                 <ul className="text-sm space-y-1">
-                  <li>• Weekend-long intensive workshop</li>
-                  <li>• Hands-on career skill building</li>
-                  <li>• Networking opportunities</li>
-                  <li>• Industry expert sessions</li>
-                  <li>• Fun team activities</li>
+                  <li>• Exclusive Insider Secrets</li>
+                  <li>• Real Advice from our Grads</li>
+                  <li>• Max out your Skills and Confidence</li>
+                  <li>• Build a Bullet-proof Network</li>
+                  <li>• Crazy Games and Wild Parties</li>
                 </ul>
               </div>
             </div>
