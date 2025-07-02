@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://lachho.github.io/sitemap.xml 
+Sitemap: https://blog.cevsoc.com/sitemap.xml 
