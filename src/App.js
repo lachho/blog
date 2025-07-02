@@ -11,6 +11,7 @@ import ContentPage from './components/info-site/ContentPage';
 import SearchResults from './components/info-site/SearchResults';
 import AboutPage from './components/info-site/AboutPage';
 import PDCPage from './components/info-site/PDCPage';
+import NotFound from './components/NotFound';
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
       {
         path: "articles/*",
         element: <ContentPage />
+      },
+      {
+        path: "*",
+        element: <NotFound />
       }
     ]
   }
