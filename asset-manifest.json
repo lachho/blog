@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/blog.cevsoc.com/static/css/main.2835bbab.css",
-    "main.js": "/blog.cevsoc.com/static/js/main.9de0a07f.js",
-    "index.html": "/blog.cevsoc.com/index.html",
-    "main.2835bbab.css.map": "/blog.cevsoc.com/static/css/main.2835bbab.css.map",
-    "main.9de0a07f.js.map": "/blog.cevsoc.com/static/js/main.9de0a07f.js.map"
+    "main.css": "/static/css/main.2835bbab.css",
+    "main.js": "/static/js/main.347e4c88.js",
+    "index.html": "/index.html",
+    "main.2835bbab.css.map": "/static/css/main.2835bbab.css.map",
+    "main.347e4c88.js.map": "/static/js/main.347e4c88.js.map"
   },
   "entrypoints": [
     "static/css/main.2835bbab.css",
-    "static/js/main.9de0a07f.js"
+    "static/js/main.347e4c88.js"
   ]
 }
