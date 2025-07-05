@@ -28,6 +28,10 @@ const AnalysisDashboard = ({ results }) => {
   return (
     <div className="mt-8 px-4 md:px-16">
       <h2 className="text-3xl font-bold text-center text-gray-800">Your Analysis is Ready</h2>
+      <h3 className="text-lg font-bold text-center text-gray-800">
+        ⚠️ The below reccomendations are not must-dos, but merely suggestions made by our algorithm. 
+        Please review the feedback and determine what is most suitable for your individual case.
+      </h3>
       
       {/* Overall Score Section */}
       <div className="mt-6 mb-8">
