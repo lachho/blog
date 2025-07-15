@@ -14,6 +14,7 @@ export const contentStructure = {
     description: 'Set yourself up for success with these smart moves before you even hit apply.',
     icon: '🚀',
     articles: [
+      { id: 'pathway-to-success' },
       { id: 'general-advice' },
       { id: 'extracurricular-activities' },
       { id: 'networking' },

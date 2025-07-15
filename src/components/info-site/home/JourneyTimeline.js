@@ -2,20 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { contentStructure } from '../../../data/contentStructure';
 
-const JourneyTimeline = () => {
+const JourneyTimeline = ({ onViewAllClick }) => {
   // Define the journey order using actual contentStructure data
   const journeySteps = [
     {
-      key: 'university',
-      step: 1,
-      color: 'from-blue-500 to-blue-600',
-      icon: '🎓'
-    },
-    {
       key: 'setting-up-for-success',
-      step: 2,
+      step: 1,
       color: 'from-purple-500 to-purple-600',
       icon: '🚀'
+    },
+    {
+      key: 'university',
+      step: 2,
+      color: 'from-blue-500 to-blue-600',
+      icon: '🎓'
     },
     {
       key: 'resume-and-cover-letter',
@@ -132,15 +132,27 @@ const JourneyTimeline = () => {
 
         {/* View All Articles Button */}
         <div className="timeline-view-all">
-          <Link
-            to="/articles"
-            className="timeline-view-all-button"
-          >
-            View All Articles
-            <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0l-4 4m4-4l-4-4" />
-            </svg>
-          </Link>
+          {onViewAllClick ? (
+            <button
+              onClick={onViewAllClick}
+              className="timeline-view-all-button"
+            >
+              View All Articles
+              <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0l-4 4m4-4l-4-4" />
+              </svg>
+            </button>
+          ) : (
+            <Link
+              to="/articles"
+              className="timeline-view-all-button"
+            >
+              View All Articles
+              <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0l-4 4m4-4l-4-4" />
+              </svg>
+            </Link>
+          )}
         </div>
       </div>
     </section>

@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const PDCAdvertisement = () => {
+  const handlePDCClick = () => {
+    // Open ticket sale page in new tab
+    window.open('https://events.humanitix.com/cevsoc-pdc-2025', '_blank');
+    // Redirect current page to blog PDC page
+    // window.location.href = 'https://blog.cevsoc.com/pdc';
+  };
+
   return (
     
     <div className="bg-gradient-to-r  py-12 px-4 mx-4 rounded-2xl shadow-2xl mb-8 bg-cover bg-center_15 bg-no-repeat"
@@ -52,12 +58,12 @@ const PDCAdvertisement = () => {
           
           {/* Call to Action */}
           <div className="space-y-4">
-            <Link
-              to="/pdc"
-              className="inline-block px-8 py-4 bg-white text-green-800 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg"
+            <button
+              onClick={handlePDCClick}
+              className="inline-block px-8 py-4 bg-white text-green-800 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer"
             >
               Learn More & Register 📝
-            </Link>
+            </button>
             
             {/* CEVSoc Affiliation */}
             <div className="flex items-center justify-center gap-3 mt-6">

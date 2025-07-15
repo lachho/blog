@@ -2,6 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = ({ onExploreClick }) => {
+  const handlePDCClick = () => {
+    // Open ticket sale page in new tab
+    window.open('https://events.humanitix.com/cevsoc-pdc-2025', '_blank');
+    // Redirect current page to blog PDC page
+    // window.location.href = 'https://blog.cevsoc.com/pdc';
+  };
+
   return (
     // <section className="h-screen bg-gradient-to-br from-green-400 via-green-500 to-yellow-600 text-white flex items-center justify-center w-full pb-20 sm:pb-32">
     <section 
@@ -55,12 +62,12 @@ const HeroSection = ({ onExploreClick }) => {
           >
             Fix My Resume!
           </Link>
-          <Link
-            to="/pdc"
-            className="px-8 py-3 bg-white text-green-600 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg"
+          <button
+            onClick={handlePDCClick}
+            className="px-8 py-3 bg-white text-green-600 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer"
           >
             Buy My PDC Ticket
-          </Link>
+          </button>
         </div>
       </div>
     </section>

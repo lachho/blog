@@ -37,7 +37,7 @@ const ArticleLibraryView = ({
       </div>
 
       {!showAllArticles ? (
-        <JourneyTimelineView />
+        <JourneyTimelineView onViewAllClick={() => setShowAllArticles(true)} />
       ) : (
         <AllArticlesView articleMetadata={articleMetadata} />
       )}
@@ -45,7 +45,7 @@ const ArticleLibraryView = ({
   );
 };
 
-const JourneyTimelineView = () => (
+const JourneyTimelineView = ({ onViewAllClick }) => (
   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
     <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-green-50 to-blue-50">
       <h2 className="text-2xl font-bold text-gray-800 mb-2">
@@ -57,7 +57,7 @@ const JourneyTimelineView = () => (
     </div>
     
     <div className="p-6">
-      <JourneyTimeline />
+      <JourneyTimeline onViewAllClick={onViewAllClick} />
     </div>
   </div>
 );

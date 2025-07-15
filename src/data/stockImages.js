@@ -9,6 +9,7 @@ export const stockImages = {
   
   // Setting up for success category
   'setting-up-for-success': {
+    'pathway-to-success': 'https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Pathway/steps to success
     'general-advice': 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Success/growth
     'extracurricular-activities': 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Team activities
     'networking': 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Networking/handshake
